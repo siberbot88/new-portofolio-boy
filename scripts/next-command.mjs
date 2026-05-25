@@ -19,8 +19,8 @@ const command =
         ]
       }
     : {
-        file: process.execPath,
-        args: [join(root, "node_modules", "next", "dist", "bin", "next"), ...args]
+        file: join(root, "node_modules", ".bin", "next"),
+        args: args
       };
 
 const result = spawnSync(command.file, command.args, {

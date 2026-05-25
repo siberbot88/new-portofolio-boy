@@ -4,12 +4,11 @@
   "private": true,
   "scripts": {
     "styles:build": "tailwindcss -i ./app/globals.css -o ./public/site.css",
-    "dev": "npm run styles:build && node scripts/next-command.mjs dev --webpack",
-    "dev:clean": "npm run styles:build && node scripts/next-command.mjs dev --webpack",
-    "build": "npm run styles:build && node scripts/next-command.mjs build --webpack",
-    "build:clean": "npm run styles:build && node scripts/next-command.mjs build --webpack",
-    "start": "node scripts/next-command.mjs start",
-    "start:clean": "node scripts/next-command.mjs start",
+    "dev": "npm run styles:build && next dev",
+    "dev:windows": "npm run styles:build && next dev --webpack",
+    "build": "npm run styles:build && next build",
+    "build:windows": "npm run styles:build && next build --webpack",
+    "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },
