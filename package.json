@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "styles:build": "tailwindcss -i ./app/globals.css -o ./public/site.css",
-    "dev": "npm run styles:build && powershell -NoProfile -ExecutionPolicy Bypass -File scripts/next-clean-path.ps1 dev --webpack",
-    "dev:clean": "npm run styles:build && powershell -NoProfile -ExecutionPolicy Bypass -File scripts/next-clean-path.ps1 dev --webpack",
-    "build": "npm run styles:build && powershell -NoProfile -ExecutionPolicy Bypass -File scripts/next-clean-path.ps1 build --webpack",
-    "build:clean": "npm run styles:build && powershell -NoProfile -ExecutionPolicy Bypass -File scripts/next-clean-path.ps1 build --webpack",
-    "start": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/next-clean-path.ps1 start",
-    "start:clean": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/next-clean-path.ps1 start",
+    "dev": "npm run styles:build && node scripts/next-command.mjs dev --webpack",
+    "dev:clean": "npm run styles:build && node scripts/next-command.mjs dev --webpack",
+    "build": "npm run styles:build && node scripts/next-command.mjs build --webpack",
+    "build:clean": "npm run styles:build && node scripts/next-command.mjs build --webpack",
+    "start": "node scripts/next-command.mjs start",
+    "start:clean": "node scripts/next-command.mjs start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },
