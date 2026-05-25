@@ -1,0 +1,13 @@
+[3m[1m[34m≈[39m[22m[23m tailwindcss [34mv4.3.0[39m
+
+Done in [34m297ms[39m
+⨯ Failed to start server
+Error: listen EADDRINUSE: address already in use :::3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+    at new Promise (<anonymous>) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}

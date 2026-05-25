@@ -1,0 +1,9 @@
+
+> mohammad-bayu-portfolio@0.1.0 start
+> powershell -NoProfile -ExecutionPolicy Bypass -File scripts/next-clean-path.ps1 start -p 3002
+
+▲ Next.js 16.2.6
+- Local:         http://localhost:3002
+- Network:       http://192.168.43.237:3002
+✓ Ready in 474ms
+  next-swc build: wasm build @next/swc-wasm-nodejs
