@@ -43,7 +43,7 @@ export function ProjectIndexTable({ projects }: ProjectIndexTableProps) {
   }, [activeCategory, projects]);
 
   return (
-    <section id="selected" className="min-h-[calc(100svh-84px)] overflow-hidden px-4 pb-12 pt-14 md:px-8 md:pb-0 md:pt-[12vh]">
+    <section id="selected" className="min-h-[calc(100svh-84px)] overflow-hidden px-4 pb-16 pt-14 md:px-8 md:pb-10 md:pt-[12vh]">
       <div className="grid gap-8 md:grid-cols-12 md:items-end">
         <p data-animate="fade-up" className="text-[12px] uppercase text-[color:var(--muted)] md:col-span-2">
           Selected work / 2024-2026
@@ -81,22 +81,25 @@ export function ProjectIndexTable({ projects }: ProjectIndexTableProps) {
         />
       </div>
 
-      <div className="mt-10 grid min-h-[46vh] auto-cols-[minmax(78vw,1fr)] grid-flow-col overflow-x-auto border-y border-[color:var(--border)] md:auto-cols-[minmax(28rem,1fr)] lg:auto-cols-[minmax(25vw,1fr)]">
+      <div
+        data-project-carousel
+        className="project-carousel mt-10 flex min-h-[46vh] snap-x snap-mandatory overflow-x-auto scroll-smooth border-y border-[color:var(--border)]"
+      >
         {filteredProjects.map((project, index) => (
           <Link
             key={project.id}
             href={`/projects/${project.slug}`}
             data-project-card
-            className="group relative grid min-h-[560px] grid-rows-[220px_1fr] border-r border-[color:var(--border)] last:border-r-0 md:min-h-[58vh]"
+            className="group relative grid min-h-[620px] w-[82vw] shrink-0 snap-start grid-rows-[minmax(300px,auto)_minmax(260px,1fr)] overflow-hidden border-r border-[color:var(--border)] last:border-r-0 md:min-h-[64vh] md:w-[30rem] lg:w-[27vw]"
           >
             <article className="relative z-10 flex flex-col justify-end p-6 md:p-8">
               <p className="mb-6 text-[12px] uppercase text-[color:var(--muted)]">
                 {project.number} / {project.year}
               </p>
-              <h2 data-project-title className="max-w-sm text-3xl font-medium leading-tight md:text-4xl">
+              <h2 data-project-title className="max-w-md text-3xl font-medium leading-[1.08] md:text-[2.35rem]">
                 {project.title}
               </h2>
-              <p className="mt-6 text-sm text-[color:var(--muted)]">
+              <p className="mt-5 text-sm leading-6 text-[color:var(--muted)]">
                 {project.client}
                 <br />
                 {project.category}
@@ -109,12 +112,23 @@ export function ProjectIndexTable({ projects }: ProjectIndexTableProps) {
                 alt={`${project.title} project preview`}
                 fill
                 data-project-visual
-                priority={index < 2}
-                sizes="(max-width: 768px) 78vw, 25vw"
+                priority={index === 0}
+                sizes="(max-width: 768px) 78vw, (max-width: 1024px) 28rem, 25vw"
                 className="object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-100"
               />
-              <span data-project-explore className="invisible absolute left-1/2 top-1/2 grid h-24 w-24 -translate-x-1/2 -translate-y-1/2 scale-90 place-items-center rounded-full border border-[#ccff00]/60 bg-[rgba(7,26,25,0.76)] text-sm text-[#ccff00] opacity-0 backdrop-blur">
-                Explore
+              <span
+                data-project-invert
+                aria-hidden="true"
+                className="absolute inset-0 bg-[#bfffa3] opacity-0 mix-blend-screen"
+              />
+              <span
+                data-project-annotation
+                className="invisible absolute left-0 top-0 z-20 inline-flex items-center gap-2 bg-[#bfffa3] px-3 py-2 text-sm leading-none text-[#071a19] opacity-0 shadow-[0_0_22px_rgba(191,255,163,0.38)]"
+              >
+                <span className="h-3 w-3 rounded-full bg-[#071a19]" />
+                <span>
+                  {project.number} / View case
+                </span>
               </span>
               <span
                 aria-hidden="true"

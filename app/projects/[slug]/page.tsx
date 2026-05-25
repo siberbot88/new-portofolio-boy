@@ -2,7 +2,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { CaseStudySection } from "@/components/CaseStudySection";
 import { FooterNextProject } from "@/components/FooterNextProject";
-import { ProjectMetaTable } from "@/components/ProjectMetaTable";
+import { ProjectDetailMatrix } from "@/components/ProjectDetailMatrix";
 import { getProjectBySlug, projects } from "@/data/projects";
 
 type ProjectPageProps = {
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: ProjectPageProps) {
   }
 
   return {
-    title: `${project.title} - Mohammad Bayu`,
+    title: `${project.title} - Mohammad Bayu Rizki`,
     description: project.summary
   };
 }
@@ -45,18 +45,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <main>
-      <section className="relative h-[70vh] min-h-[520px] border-b border-[color:var(--border)]">
-        <Image
-          src={project.heroImage}
-          alt={`${project.title} interface overview`}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-      </section>
-
-      <ProjectMetaTable project={project} />
+      <ProjectDetailMatrix project={project} />
 
       <CaseStudySection label="01 / Challenge" title="The Challenge">
         <p className="max-w-4xl text-[1.6rem] leading-tight">

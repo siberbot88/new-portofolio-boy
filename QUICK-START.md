@@ -1,5 +1,22 @@
 # ⚡ Quick Start - Deploy Portfolio dalam 5 Menit
 
+## ⚠️ Penting: Build Error di Windows?
+
+Jika Anda mengalami error saat build lokal di Windows:
+```
+sh: line 1: powershell: command not found
+```
+atau
+```
+exclamation mark (!) not allowed
+```
+
+**JANGAN KHAWATIR!** Error ini hanya terjadi di Windows lokal karena path folder. Build akan **BERHASIL** di Vercel/Netlify (menggunakan Linux).
+
+**Solusi**: Deploy langsung ke Vercel tanpa build lokal. Lihat [BUILD-NOTES.md](./BUILD-NOTES.md) untuk detail.
+
+---
+
 ## 🎯 Cara Tercepat: Deploy ke Vercel
 
 ### Opsi 1: One-Click Deploy (TERMUDAH)
@@ -233,4 +250,4 @@ Portfolio Anda sekarang **LIVE** dan bisa diakses dari mana saja!
 
 **Total Waktu Deploy: 5 Menit** ⚡
 
-Made with ❤️ by Mohammad Bayu
+Made with ❤️ by Mohammad Bayu Rizki

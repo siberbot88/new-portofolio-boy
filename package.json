@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "styles:build": "tailwindcss -i ./app/globals.css -o ./public/site.css",
-    "dev": "npm run styles:build && next dev --webpack",
+    "dev": "npm run styles:build && powershell -NoProfile -ExecutionPolicy Bypass -File scripts/next-clean-path.ps1 dev --webpack",
     "dev:clean": "npm run styles:build && powershell -NoProfile -ExecutionPolicy Bypass -File scripts/next-clean-path.ps1 dev --webpack",
-    "build": "npm run styles:build && next build --webpack",
+    "build": "npm run styles:build && powershell -NoProfile -ExecutionPolicy Bypass -File scripts/next-clean-path.ps1 build --webpack",
     "build:clean": "npm run styles:build && powershell -NoProfile -ExecutionPolicy Bypass -File scripts/next-clean-path.ps1 build --webpack",
-    "start": "next start",
+    "start": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/next-clean-path.ps1 start",
     "start:clean": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/next-clean-path.ps1 start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"

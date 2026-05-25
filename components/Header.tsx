@@ -35,12 +35,12 @@ export function Header() {
       <div className="grid gap-y-4 text-sm leading-none md:grid-cols-12 md:items-start">
         <Link
           href="/"
-          className="grid max-w-lg grid-cols-3 gap-6 font-medium md:col-span-5"
+          className="grid max-w-2xl grid-cols-[auto_auto_minmax(0,1fr)] gap-8 font-medium md:col-span-5 md:gap-20"
           aria-label="Go to portfolio index"
         >
           <span>M.</span>
           <span>B.</span>
-          <span>Mohammad Bayu</span>
+          <span>Mohammad Bayu Rizki</span>
         </Link>
 
         <p className="text-[12px] uppercase text-[color:var(--muted)] md:col-span-2 md:text-center">
@@ -55,11 +55,11 @@ export function Header() {
             <span className="h-2.5 w-2.5 rounded-full bg-[var(--accent)]" />
             Selected <sup className="text-[10px] text-[color:var(--muted)]">(07)</sup>
           </Link>
-          <Link href="/#archive" className="inline-flex items-baseline gap-1 text-[color:var(--muted)]">
+          <Link href="/archive" className="inline-flex items-baseline gap-1 text-[color:var(--muted)]">
             <span className="h-2.5 w-2.5 rounded-full border border-[color:var(--border)]" />
             Archive <sup className="text-[10px]">(07)</sup>
           </Link>
-          <Link href="mailto:mohammad.bayu@example.com" className="inline-flex items-baseline gap-1 text-[color:var(--muted)]">
+          <Link href="mailto:mohammadbayurizkii@gmail.com" className="inline-flex items-baseline gap-1 text-[color:var(--muted)]">
             <span className="h-2.5 w-2.5 rounded-full border border-[color:var(--border)]" />
             Contact <sup className="text-[10px]">(01)</sup>
           </Link>

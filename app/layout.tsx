@@ -5,9 +5,10 @@ import { FloatingMenu } from "@/components/FloatingMenu";
 import { Header } from "@/components/Header";
 import { MotionSystem } from "@/components/MotionSystem";
 import { SketchCursor } from "@/components/SketchCursor";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "Mohammad Bayu - Portfolio",
+  title: "Mohammad Bayu Rizki - Portfolio",
   description:
     "Index-based portfolio for business analysis, UX research, and digital development work."
 };
@@ -31,8 +32,9 @@ export default function RootLayout({
         <Header />
         <MotionSystem />
         <SketchCursor />
-        <FloatingMenu />
         {children}
+        <SiteFooter />
+        <FloatingMenu />
       </body>
     </html>
   );

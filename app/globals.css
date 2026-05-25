@@ -75,6 +75,22 @@ img {
   display: block;
 }
 
+.cursor-inversion-canvas {
+  opacity: 0.96;
+  mix-blend-mode: screen;
+  filter: saturate(1.18) contrast(1.04);
+  will-change: opacity;
+}
+
+.project-carousel {
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.project-carousel::-webkit-scrollbar {
+  display: none;
+}
+
 ::selection {
   background: var(--accent);
   color: #ffffff;
@@ -98,4 +114,205 @@ img {
 
 .hairline {
   border-color: var(--border);
+}
+
+.archive-card-in {
+  animation: archive-card-in 680ms cubic-bezier(0.19, 1, 0.22, 1) both;
+  will-change: clip-path, transform, opacity;
+}
+
+.archive-card-in-down {
+  animation: archive-card-in-down 680ms cubic-bezier(0.19, 1, 0.22, 1) both;
+  will-change: clip-path, transform, opacity;
+}
+
+.archive-card-in-up {
+  animation: archive-card-in-up 680ms cubic-bezier(0.19, 1, 0.22, 1) both;
+  will-change: clip-path, transform, opacity;
+}
+
+.archive-card-out {
+  animation: archive-card-out 560ms cubic-bezier(0.19, 1, 0.22, 1) both;
+  will-change: clip-path, transform, opacity;
+}
+
+.archive-card-out-down {
+  animation: archive-card-out-down 560ms cubic-bezier(0.19, 1, 0.22, 1) both;
+  will-change: clip-path, transform, opacity;
+}
+
+.archive-card-out-up {
+  animation: archive-card-out-up 560ms cubic-bezier(0.19, 1, 0.22, 1) both;
+  will-change: clip-path, transform, opacity;
+}
+
+.menu-overlay {
+  animation: menu-overlay-in 680ms cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
+.menu-row {
+  animation: menu-row-in 720ms cubic-bezier(0.19, 1, 0.22, 1) both;
+  will-change: transform, opacity;
+}
+
+.menu-row:nth-child(2) {
+  animation-delay: 70ms;
+}
+
+.menu-row:nth-child(3) {
+  animation-delay: 140ms;
+}
+
+.site-footer::before {
+  position: absolute;
+  top: 0;
+  left: -30%;
+  width: 30%;
+  height: 1px;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(191, 255, 163, 0.9),
+    transparent
+  );
+  animation: footer-scan 5.4s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+}
+
+.footer-email {
+  font-size: clamp(3.75rem, 6.1vw, 8rem);
+  line-height: 0.9;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+@keyframes archive-card-in {
+  0% {
+    opacity: 0.2;
+    clip-path: inset(0 100% 0 0);
+    transform: translate3d(18%, 0, 0) scale(1.025);
+  }
+
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes archive-card-out {
+  0% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    clip-path: inset(0 0 0 100%);
+    transform: translate3d(-14%, 0, 0) scale(0.985);
+  }
+}
+
+@keyframes archive-card-in-down {
+  0% {
+    opacity: 0.18;
+    clip-path: inset(0 0 100% 0);
+    transform: translate3d(0, -12%, 0) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes archive-card-out-down {
+  0% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    clip-path: inset(100% 0 0 0);
+    transform: translate3d(0, 12%, 0) scale(0.985);
+  }
+}
+
+@keyframes archive-card-in-up {
+  0% {
+    opacity: 0.18;
+    clip-path: inset(100% 0 0 0);
+    transform: translate3d(0, 12%, 0) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes archive-card-out-up {
+  0% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+    transform: translate3d(0, -12%, 0) scale(0.985);
+  }
+}
+
+@keyframes menu-overlay-in {
+  0% {
+    clip-path: inset(100% 0 0 0);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes menu-row-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 54px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes footer-scan {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  58%,
+  100% {
+    transform: translate3d(460%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .archive-card-in,
+  .archive-card-in-down,
+  .archive-card-in-up,
+  .archive-card-out,
+  .archive-card-out-down,
+  .archive-card-out-up,
+  .menu-overlay,
+  .menu-row,
+  .site-footer::before {
+    animation: none;
+  }
 }

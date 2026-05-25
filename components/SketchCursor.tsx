@@ -8,10 +8,20 @@ type Stroke = {
   life: number;
   maxLife: number;
   width: number;
+  speed: number;
   wobble: number;
 };
 
-const NEON_GREEN = "#ccff00";
+const BRUSH_GREEN = "#bfffa3";
+const CORE_GREEN = "#e7ffd7";
+const MAX_POINTS = 220;
+
+type RibbonEdge = {
+  leftX: number;
+  leftY: number;
+  rightX: number;
+  rightY: number;
+};
 
 export function SketchCursor() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -44,6 +54,22 @@ export function SketchCursor() {
       context.setTransform(ratio, 0, 0, ratio, 0, 0);
     };
 
+    const pushStrokePoint = (x: number, y: number, distance: number) => {
+      strokesRef.current.push({
+        x,
+        y,
+        life: 88,
+        maxLife: 88,
+        width: 32 + Math.min(distance * 0.34, 22),
+        speed: distance,
+        wobble: Math.random() * Math.PI * 2
+      });
+
+      if (strokesRef.current.length > MAX_POINTS) {
+        strokesRef.current.splice(0, strokesRef.current.length - MAX_POINTS);
+      }
+    };
+
     const addStrokePoint = (x: number, y: number) => {
       if (!canDraw.matches || reducedMotion.matches) {
         return;
@@ -51,27 +77,117 @@ export function SketchCursor() {
 
       const previous = strokesRef.current[strokesRef.current.length - 1];
       const distance = previous ? Math.hypot(x - previous.x, y - previous.y) : 999;
-      if (distance < 1.15) {
+      if (distance < 1.4) {
         return;
       }
 
-      strokesRef.current.push({
-        x,
-        y,
-        life: 72,
-        maxLife: 72,
-        width: 9,
-        wobble: Math.random() * Math.PI * 2
-      });
+      if (!previous) {
+        pushStrokePoint(x, y, 10);
+        return;
+      }
 
-      if (strokesRef.current.length > 220) {
-        strokesRef.current.splice(0, strokesRef.current.length - 220);
+      const steps = Math.max(1, Math.min(16, Math.ceil(distance / 8)));
+
+      for (let step = 1; step <= steps; step += 1) {
+        const progress = step / steps;
+        pushStrokePoint(
+          previous.x + (x - previous.x) * progress,
+          previous.y + (y - previous.y) * progress,
+          distance / steps
+        );
       }
     };
 
     const resetTarget = () => {
       targetRef.current = null;
       cursorRef.current = null;
+    };
+
+    const getRibbonEdges = (points: Stroke[], widthRatio: number) => {
+      return points.map<RibbonEdge>((point, index) => {
+        const previous = points[Math.max(0, index - 1)];
+        const next = points[Math.min(points.length - 1, index + 1)];
+        const deltaX = next.x - previous.x;
+        const deltaY = next.y - previous.y;
+        const length = Math.hypot(deltaX, deltaY) || 1;
+        const normalX = -deltaY / length;
+        const normalY = deltaX / length;
+        const lifeRatio = Math.max(0, point.life / point.maxLife);
+        const taperedWidth =
+          point.width * widthRatio * Math.pow(lifeRatio, 0.62);
+        const wobble =
+          Math.sin(frame * 0.035 + point.wobble + point.x * 0.004) *
+          Math.min(2.4, 0.7 + point.speed * 0.04);
+
+        return {
+          leftX: point.x + normalX * taperedWidth + normalX * wobble,
+          leftY: point.y + normalY * taperedWidth + normalY * wobble,
+          rightX: point.x - normalX * taperedWidth - normalX * wobble,
+          rightY: point.y - normalY * taperedWidth - normalY * wobble
+        };
+      });
+    };
+
+    const fillRibbon = (
+      points: Stroke[],
+      widthRatio: number,
+      color: string,
+      alpha: number,
+      blur: number
+    ) => {
+      if (points.length < 3) {
+        return;
+      }
+
+      const edges = getRibbonEdges(points, widthRatio);
+
+      context.save();
+      context.globalAlpha = alpha;
+      context.shadowColor = color;
+      context.shadowBlur = blur;
+      context.fillStyle = color;
+      context.beginPath();
+      context.moveTo(edges[0].leftX, edges[0].leftY);
+
+      for (let index = 1; index < edges.length; index += 1) {
+        context.lineTo(edges[index].leftX, edges[index].leftY);
+      }
+
+      for (let index = edges.length - 1; index >= 0; index -= 1) {
+        context.lineTo(edges[index].rightX, edges[index].rightY);
+      }
+
+      context.closePath();
+      context.fill();
+      context.restore();
+    };
+
+    const drawCoreLine = (points: Stroke[]) => {
+      if (points.length < 3) {
+        return;
+      }
+
+      context.save();
+      context.globalAlpha = 0.82;
+      context.shadowColor = CORE_GREEN;
+      context.shadowBlur = 7;
+      context.strokeStyle = CORE_GREEN;
+      context.lineCap = "butt";
+      context.lineJoin = "round";
+      context.lineWidth = 6;
+      context.beginPath();
+      context.moveTo(points[0].x, points[0].y);
+
+      for (let index = 1; index < points.length - 1; index += 1) {
+        const current = points[index];
+        const next = points[index + 1];
+        const midX = (current.x + next.x) / 2;
+        const midY = (current.y + next.y) / 2;
+        context.quadraticCurveTo(current.x, current.y, midX, midY);
+      }
+
+      context.stroke();
+      context.restore();
     };
 
     const draw = () => {
@@ -90,39 +206,11 @@ export function SketchCursor() {
       }
 
       context.clearRect(0, 0, window.innerWidth, window.innerHeight);
-      context.lineCap = "round";
-      context.lineJoin = "round";
+      const strokes = strokesRef.current.filter((stroke) => stroke.life > 0);
 
-      const strokes = strokesRef.current;
-
-      for (let index = 1; index < strokes.length; index += 1) {
-        const previous = strokes[index - 1];
-        const stroke = strokes[index];
-        const opacity = Math.max(0, stroke.life / stroke.maxLife);
-        const wobble =
-          Math.sin(frame * 0.08 + stroke.wobble + stroke.x * 0.012) * 1.2;
-        const controlX = (previous.x + stroke.x) / 2 + wobble;
-        const controlY = (previous.y + stroke.y) / 2 - wobble;
-
-        context.globalAlpha = opacity * 0.34;
-        context.shadowColor = NEON_GREEN;
-        context.shadowBlur = 18;
-        context.strokeStyle = NEON_GREEN;
-        context.lineWidth = stroke.width * 1.6 * opacity;
-        context.beginPath();
-        context.moveTo(previous.x, previous.y);
-        context.quadraticCurveTo(controlX, controlY, stroke.x, stroke.y);
-        context.stroke();
-
-        context.globalAlpha = opacity * 0.72;
-        context.shadowBlur = 8;
-        context.strokeStyle = "#f3ffd0";
-        context.lineWidth = stroke.width * 0.42 * opacity;
-        context.beginPath();
-        context.moveTo(previous.x, previous.y);
-        context.quadraticCurveTo(controlX, controlY, stroke.x, stroke.y);
-        context.stroke();
-      }
+      fillRibbon(strokes, 0.62, BRUSH_GREEN, 0.68, 18);
+      fillRibbon(strokes, 0.34, CORE_GREEN, 0.42, 8);
+      drawCoreLine(strokes);
 
       strokesRef.current = strokes.filter((stroke) => {
         stroke.life -= 1;
@@ -167,7 +255,7 @@ export function SketchCursor() {
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className="pointer-events-none fixed inset-0 z-[80] mix-blend-screen"
+      className="cursor-inversion-canvas pointer-events-none fixed inset-0 z-[80]"
     />
   );
 }
