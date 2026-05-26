@@ -48,7 +48,7 @@ function ArchivePreviewCard({
       />
       <span
         aria-hidden="true"
-        className="absolute inset-0 bg-[#bfffa3] opacity-0 mix-blend-screen transition-opacity duration-300"
+        className="absolute inset-0 bg-[var(--accent)] opacity-0 mix-blend-screen transition-opacity duration-300"
       />
     </div>
   );
@@ -234,12 +234,12 @@ export function ArchiveList({ projects }: ArchiveListProps) {
               data-archive-row
               onMouseEnter={() => showPreview(project, index)}
               onFocus={() => showPreview(project, index)}
-              className="group relative grid min-h-28 gap-3 border-b border-[color:var(--border)] px-4 py-6 text-[color:var(--muted)] transition-colors duration-300 hover:bg-[#bfffa3] hover:text-[#071a19] focus-visible:bg-[#bfffa3] focus-visible:text-[#071a19] md:grid-cols-[5rem_1.5fr_1.5fr_8rem_1fr] md:items-center md:px-8"
+              className="group relative grid min-h-28 gap-3 border-b border-[color:var(--border)] px-4 py-6 text-[color:var(--muted)] transition-colors duration-300 hover:bg-[var(--accent)] hover:text-[var(--background)] focus-visible:bg-[var(--accent)] focus-visible:text-[var(--background)] md:grid-cols-[5rem_1.5fr_1.5fr_8rem_1fr] md:items-center md:px-8"
             >
               <span className="text-[11px] uppercase">
                 {project.number}
               </span>
-              <span className="text-2xl leading-tight text-[var(--foreground)] transition-colors duration-300 group-hover:text-[#071a19] group-focus-visible:text-[#071a19]">
+              <span className="text-2xl leading-tight text-[var(--foreground)] transition-colors duration-300 group-hover:text-[var(--background)] group-focus-visible:text-[var(--background)]">
                 {project.title}
               </span>
               <span className="text-lg">{project.category}</span>
@@ -247,8 +247,8 @@ export function ArchiveList({ projects }: ArchiveListProps) {
               <span className="max-w-sm text-sm leading-5">
                 {project.client}
               </span>
-              <span className="absolute left-1/2 top-1/2 hidden -translate-y-1/2 items-center gap-2 bg-[#071a19] px-3 py-2 text-sm leading-none text-[#bfffa3] opacity-0 transition-opacity duration-300 group-hover:flex group-hover:opacity-100 md:flex">
-                <span className="h-3 w-3 rounded-full bg-[#bfffa3]" />
+              <span className="absolute left-1/2 top-1/2 hidden -translate-y-1/2 items-center gap-2 bg-[var(--background)] px-3 py-2 text-sm leading-none text-[var(--accent)] opacity-0 transition-opacity duration-300 group-hover:flex group-hover:opacity-100 md:flex">
+                <span className="h-3 w-3 rounded-full bg-[var(--accent)]" />
                 {project.discipline}
               </span>
             </Link>

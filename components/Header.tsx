@@ -49,7 +49,7 @@ export function Header() {
 
         <nav
           aria-label="Primary navigation"
-          className="flex flex-wrap gap-x-6 gap-y-2 text-sm md:col-span-5 md:justify-end"
+          className="flex flex-wrap gap-x-6 gap-y-2 text-sm md:col-span-5 md:justify-end md:pr-16"
         >
           <Link href="/#selected" className="inline-flex items-baseline gap-1">
             <span className="h-2.5 w-2.5 rounded-full bg-[var(--accent)]" />

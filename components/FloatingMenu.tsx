@@ -46,7 +46,7 @@ export function FloatingMenu() {
                 <span>B.</span>
                 <span>Mohammad Bayu Rizki</span>
               </Link>
-              <p className="text-[12px] uppercase text-black/50 md:col-span-2 md:text-center">
+              <p className="text-[12px] uppercase text-[color:var(--muted)] md:col-span-2 md:text-center">
                 Menu / 2024-2026
               </p>
               <nav
@@ -58,23 +58,23 @@ export function FloatingMenu() {
                   onClick={closeMenu}
                   className="inline-flex items-baseline gap-1 font-medium"
                 >
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#071a19]" />
-                  Selected <sup className="text-[10px] text-black/45">(07)</sup>
+                  <span className="h-2.5 w-2.5 rounded-full bg-[var(--accent)]" />
+                  Selected <sup className="text-[10px] text-[color:var(--muted)]">(07)</sup>
                 </Link>
                 <Link
                   href="/archive"
                   onClick={closeMenu}
-                  className="inline-flex items-baseline gap-1 text-black/55"
+                  className="inline-flex items-baseline gap-1 text-[color:var(--muted)]"
                 >
-                  <span className="h-2.5 w-2.5 rounded-full border border-black/35" />
+                  <span className="h-2.5 w-2.5 rounded-full border border-[color:var(--border)]" />
                   Archive <sup className="text-[10px]">(07)</sup>
                 </Link>
                 <a
                   href={`mailto:${email}`}
                   onClick={closeMenu}
-                  className="inline-flex items-baseline gap-1 text-black/55"
+                  className="inline-flex items-baseline gap-1 text-[color:var(--muted)]"
                 >
-                  <span className="h-2.5 w-2.5 rounded-full border border-black/35" />
+                  <span className="h-2.5 w-2.5 rounded-full border border-[color:var(--border)]" />
                   Contact <sup className="text-[10px]">(01)</sup>
                 </a>
               </nav>
@@ -88,50 +88,50 @@ export function FloatingMenu() {
                 </p>
                 <a
                   href={`mailto:${email}`}
-                  className="mt-8 block text-base text-black/55 transition-colors hover:text-[#071a19]"
+                  className="mt-8 block text-base text-[color:var(--muted)] transition-colors hover:text-[var(--accent)]"
                 >
                   {email}
                 </a>
               </div>
-              <nav className="flex flex-wrap items-end gap-x-8 gap-y-3 text-base text-black/55 md:col-span-5 md:col-start-8 md:justify-end md:self-end">
+              <nav className="flex flex-wrap items-end gap-x-8 gap-y-3 text-base text-[color:var(--muted)] md:col-span-5 md:col-start-8 md:justify-end md:self-end">
                 <a
                   href="https://github.com/siberbot88"
                   target="_blank"
                   rel="noreferrer"
-                  className="transition-colors hover:text-[#071a19]"
+                  className="transition-colors hover:text-[var(--accent)]"
                 >
                   GitHub
                 </a>
                 <Link
                   href="/archive"
                   onClick={closeMenu}
-                  className="transition-colors hover:text-[#071a19]"
+                  className="transition-colors hover:text-[var(--accent)]"
                 >
                   Archive
                 </Link>
-                <span className="text-black/25">.</span>
+                <span className="text-[color:var(--muted)]">.</span>
                 <a
                   href={`mailto:${email}`}
-                  className="transition-colors hover:text-[#071a19]"
+                  className="transition-colors hover:text-[var(--accent)]"
                 >
                   Capabilities Deck
                 </a>
                 <a
                   href={`mailto:${email}`}
-                  className="transition-colors hover:text-[#071a19]"
+                  className="transition-colors hover:text-[var(--accent)]"
                 >
                   Showreel
                 </a>
               </nav>
             </section>
 
-            <nav aria-label="Expanded menu routes" className="border-t border-black/25 pb-28">
+            <nav aria-label="Expanded menu routes" className="border-t border-[color:var(--border)] pb-28">
               <Link
                 href="/#selected"
                 onClick={closeMenu}
-                className="menu-row group grid min-h-32 grid-cols-[5rem_1fr_4rem] items-center border-b border-black/25 px-4 transition-colors duration-300 hover:bg-[#bfffa3] md:min-h-40 md:grid-cols-[18vw_1fr_18vw] md:px-8 lg:min-h-44"
+                className="menu-row group grid min-h-32 grid-cols-[5rem_1fr_4rem] items-center border-b border-[color:var(--border)] px-4 transition-colors duration-300 hover:bg-[var(--accent)] hover:text-[var(--background)] md:min-h-40 md:grid-cols-[18vw_1fr_18vw] md:px-8 lg:min-h-44"
               >
-                <span className="text-7xl font-medium leading-none text-black/35 transition-colors group-hover:text-[#275f31] md:text-8xl lg:text-9xl">
+                <span className="text-7xl font-medium leading-none text-[color:var(--muted)] transition-colors group-hover:text-[var(--background)] md:text-8xl lg:text-9xl">
                   01
                 </span>
                 <span className="text-5xl font-medium leading-none md:text-7xl lg:text-8xl">
@@ -144,9 +144,9 @@ export function FloatingMenu() {
               <Link
                 href="/archive"
                 onClick={closeMenu}
-                className="menu-row group grid min-h-32 grid-cols-[5rem_1fr_4rem] items-center border-b border-black/25 px-4 transition-colors duration-300 hover:bg-[#bfffa3] md:min-h-40 md:grid-cols-[18vw_1fr_18vw] md:px-8 lg:min-h-44"
+                className="menu-row group grid min-h-32 grid-cols-[5rem_1fr_4rem] items-center border-b border-[color:var(--border)] px-4 transition-colors duration-300 hover:bg-[var(--accent)] hover:text-[var(--background)] md:min-h-40 md:grid-cols-[18vw_1fr_18vw] md:px-8 lg:min-h-44"
               >
-                <span className="text-7xl font-medium leading-none text-black/35 transition-colors group-hover:text-[#275f31] md:text-8xl lg:text-9xl">
+                <span className="text-7xl font-medium leading-none text-[color:var(--muted)] transition-colors group-hover:text-[var(--background)] md:text-8xl lg:text-9xl">
                   02
                 </span>
                 <span className="text-5xl font-medium leading-none md:text-7xl lg:text-8xl">
@@ -159,9 +159,9 @@ export function FloatingMenu() {
               <a
                 href={`mailto:${email}`}
                 onClick={closeMenu}
-                className="menu-row group grid min-h-32 grid-cols-[5rem_1fr_4rem] items-center border-b border-black/25 px-4 transition-colors duration-300 hover:bg-[#bfffa3] md:min-h-40 md:grid-cols-[18vw_1fr_18vw] md:px-8 lg:min-h-44"
+                className="menu-row group grid min-h-32 grid-cols-[5rem_1fr_4rem] items-center border-b border-[color:var(--border)] px-4 transition-colors duration-300 hover:bg-[var(--accent)] hover:text-[var(--background)] md:min-h-40 md:grid-cols-[18vw_1fr_18vw] md:px-8 lg:min-h-44"
               >
-                <span className="text-7xl font-medium leading-none text-black/35 transition-colors group-hover:text-[#275f31] md:text-8xl lg:text-9xl">
+                <span className="text-7xl font-medium leading-none text-[color:var(--muted)] transition-colors group-hover:text-[var(--background)] md:text-8xl lg:text-9xl">
                   03
                 </span>
                 <span className="text-5xl font-medium leading-none md:text-7xl lg:text-8xl">
@@ -183,8 +183,8 @@ export function FloatingMenu() {
           onClick={() => setOpen((current) => !current)}
           className={`min-w-32 rounded-[6px] border px-8 py-4 font-medium shadow-[0_0_0_4px_rgba(238,233,228,0.12)] transition-colors ${
             open
-              ? "border-[#071a19] bg-[#071a19] text-[#f3f0eb] hover:bg-[#bfffa3] hover:text-[#071a19]"
-              : "border-[color:var(--border)] bg-[var(--background)] text-[var(--foreground)] hover:bg-[#bfffa3] hover:text-[#071a19]"
+              ? "border-[var(--accent)] bg-[var(--accent)] text-[var(--background)] hover:bg-[var(--foreground)] hover:text-[var(--background)]"
+              : "border-[color:var(--border)] bg-[var(--background)] text-[var(--foreground)] hover:bg-[var(--accent)] hover:text-[var(--background)]"
           }`}
         >
           {open ? "Close" : "Menu"}

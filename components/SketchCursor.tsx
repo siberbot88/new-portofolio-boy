@@ -2,48 +2,42 @@
 
 import { useEffect, useRef } from "react";
 
-type Stroke = {
+type Point = {
   x: number;
   y: number;
-  life: number;
-  maxLife: number;
-  width: number;
-  speed: number;
-  wobble: number;
 };
 
-const BRUSH_GREEN = "#bfffa3";
-const CORE_GREEN = "#e7ffd7";
-const MAX_POINTS = 220;
+const PALE_GREEN = "#c9fbc6";
+const CHAIN_LENGTH = 46;
+const HEAD_RADIUS = 8;
 
-type RibbonEdge = {
-  leftX: number;
-  leftY: number;
-  rightX: number;
-  rightY: number;
-};
+function lerp(current: number, target: number, amount: number) {
+  return current + (target - current) * amount;
+}
 
 export function SketchCursor() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const strokesRef = useRef<Stroke[]>([]);
-  const targetRef = useRef<{ x: number; y: number } | null>(null);
-  const cursorRef = useRef<{ x: number; y: number } | null>(null);
+  const targetRef = useRef<Point | null>(null);
+  const chainRef = useRef<Point[]>([]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) {
+    const context = canvas?.getContext("2d", {
+      alpha: true,
+      desynchronized: true
+    });
+
+    if (!canvas || !context) {
       return;
     }
 
-    const canDraw = window.matchMedia("(hover: hover) and (pointer: fine)");
+    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const context = canvas.getContext("2d");
-    let frame = 0;
     let animationId = 0;
-
-    if (!context) {
-      return;
-    }
+    let lastFrame = performance.now();
+    let visible = false;
+    let lastTarget: Point | null = null;
+    let speed = 0;
 
     const resize = () => {
       const ratio = window.devicePixelRatio || 1;
@@ -54,200 +48,156 @@ export function SketchCursor() {
       context.setTransform(ratio, 0, 0, ratio, 0, 0);
     };
 
-    const pushStrokePoint = (x: number, y: number, distance: number) => {
-      strokesRef.current.push({
-        x,
-        y,
-        life: 88,
-        maxLife: 88,
-        width: 32 + Math.min(distance * 0.34, 22),
-        speed: distance,
-        wobble: Math.random() * Math.PI * 2
-      });
+    const seedChain = (point: Point) => {
+      chainRef.current = Array.from({ length: CHAIN_LENGTH }, () => ({
+        x: point.x,
+        y: point.y
+      }));
+    };
 
-      if (strokesRef.current.length > MAX_POINTS) {
-        strokesRef.current.splice(0, strokesRef.current.length - MAX_POINTS);
+    const updateChain = (target: Point, frameDelta: number) => {
+      const chain = chainRef.current;
+
+      if (chain.length !== CHAIN_LENGTH) {
+        seedChain(target);
+      }
+
+      const head = chain[0];
+      const headEase = reducedMotion.matches
+        ? 1
+        : 1 - Math.pow(1 - 0.74, frameDelta);
+
+      head.x = lerp(head.x, target.x, headEase);
+      head.y = lerp(head.y, target.y, headEase);
+
+      for (let index = 1; index < chain.length; index += 1) {
+        const previous = chain[index - 1];
+        const current = chain[index];
+        const ease = reducedMotion.matches
+          ? 1
+          : 1 - Math.pow(1 - Math.max(0.12, 0.34 - index * 0.0048), frameDelta);
+
+        current.x = lerp(current.x, previous.x, ease);
+        current.y = lerp(current.y, previous.y, ease);
       }
     };
 
-    const addStrokePoint = (x: number, y: number) => {
-      if (!canDraw.matches || reducedMotion.matches) {
+    const drawVariableRibbon = (chain: Point[]) => {
+      if (chain.length < 3) {
         return;
       }
 
-      const previous = strokesRef.current[strokesRef.current.length - 1];
-      const distance = previous ? Math.hypot(x - previous.x, y - previous.y) : 999;
-      if (distance < 1.4) {
-        return;
-      }
-
-      if (!previous) {
-        pushStrokePoint(x, y, 10);
-        return;
-      }
-
-      const steps = Math.max(1, Math.min(16, Math.ceil(distance / 8)));
-
-      for (let step = 1; step <= steps; step += 1) {
-        const progress = step / steps;
-        pushStrokePoint(
-          previous.x + (x - previous.x) * progress,
-          previous.y + (y - previous.y) * progress,
-          distance / steps
-        );
-      }
-    };
-
-    const resetTarget = () => {
-      targetRef.current = null;
-      cursorRef.current = null;
-    };
-
-    const getRibbonEdges = (points: Stroke[], widthRatio: number) => {
-      return points.map<RibbonEdge>((point, index) => {
-        const previous = points[Math.max(0, index - 1)];
-        const next = points[Math.min(points.length - 1, index + 1)];
-        const deltaX = next.x - previous.x;
-        const deltaY = next.y - previous.y;
-        const length = Math.hypot(deltaX, deltaY) || 1;
-        const normalX = -deltaY / length;
-        const normalY = deltaX / length;
-        const lifeRatio = Math.max(0, point.life / point.maxLife);
-        const taperedWidth =
-          point.width * widthRatio * Math.pow(lifeRatio, 0.62);
-        const wobble =
-          Math.sin(frame * 0.035 + point.wobble + point.x * 0.004) *
-          Math.min(2.4, 0.7 + point.speed * 0.04);
-
-        return {
-          leftX: point.x + normalX * taperedWidth + normalX * wobble,
-          leftY: point.y + normalY * taperedWidth + normalY * wobble,
-          rightX: point.x - normalX * taperedWidth - normalX * wobble,
-          rightY: point.y - normalY * taperedWidth - normalY * wobble
-        };
-      });
-    };
-
-    const fillRibbon = (
-      points: Stroke[],
-      widthRatio: number,
-      color: string,
-      alpha: number,
-      blur: number
-    ) => {
-      if (points.length < 3) {
-        return;
-      }
-
-      const edges = getRibbonEdges(points, widthRatio);
+      const visibleLength = Math.min(
+        chain.length,
+        Math.max(12, Math.floor(18 + speed * 0.18))
+      );
 
       context.save();
-      context.globalAlpha = alpha;
-      context.shadowColor = color;
-      context.shadowBlur = blur;
-      context.fillStyle = color;
+      context.strokeStyle = PALE_GREEN;
+      context.lineCap = "round";
+      context.lineJoin = "round";
+      context.globalCompositeOperation = "source-over";
+
+      for (let index = visibleLength - 1; index >= 2; index -= 1) {
+        const before = chain[index - 2];
+        const previous = chain[index - 1];
+        const current = chain[index];
+        const progress = 1 - index / visibleLength;
+        const startX = (before.x + previous.x) / 2;
+        const startY = (before.y + previous.y) / 2;
+        const endX = (previous.x + current.x) / 2;
+        const endY = (previous.y + current.y) / 2;
+        const pullIntoDot = Math.pow(progress, 1.9);
+
+        context.globalAlpha = 0.86;
+        context.lineWidth =
+          2.4 + pullIntoDot * (10 + Math.min(speed * 0.04, 11));
+        context.beginPath();
+        context.moveTo(startX, startY);
+        context.quadraticCurveTo(previous.x, previous.y, endX, endY);
+        context.stroke();
+      }
+
+      context.restore();
+    };
+
+    const drawHead = (point: Point) => {
+      context.save();
+      context.fillStyle = PALE_GREEN;
+      context.globalAlpha = 1;
       context.beginPath();
-      context.moveTo(edges[0].leftX, edges[0].leftY);
-
-      for (let index = 1; index < edges.length; index += 1) {
-        context.lineTo(edges[index].leftX, edges[index].leftY);
-      }
-
-      for (let index = edges.length - 1; index >= 0; index -= 1) {
-        context.lineTo(edges[index].rightX, edges[index].rightY);
-      }
-
-      context.closePath();
+      context.arc(point.x, point.y, HEAD_RADIUS, 0, Math.PI * 2);
       context.fill();
       context.restore();
     };
 
-    const drawCoreLine = (points: Stroke[]) => {
-      if (points.length < 3) {
-        return;
-      }
-
-      context.save();
-      context.globalAlpha = 0.82;
-      context.shadowColor = CORE_GREEN;
-      context.shadowBlur = 7;
-      context.strokeStyle = CORE_GREEN;
-      context.lineCap = "butt";
-      context.lineJoin = "round";
-      context.lineWidth = 6;
-      context.beginPath();
-      context.moveTo(points[0].x, points[0].y);
-
-      for (let index = 1; index < points.length - 1; index += 1) {
-        const current = points[index];
-        const next = points[index + 1];
-        const midX = (current.x + next.x) / 2;
-        const midY = (current.y + next.y) / 2;
-        context.quadraticCurveTo(current.x, current.y, midX, midY);
-      }
-
-      context.stroke();
-      context.restore();
-    };
-
-    const draw = () => {
-      frame += 1;
-      const target = targetRef.current;
-
-      if (target && canDraw.matches && !reducedMotion.matches) {
-        const cursor = cursorRef.current ?? target;
-
-        cursorRef.current = {
-          x: cursor.x + (target.x - cursor.x) * 0.24,
-          y: cursor.y + (target.y - cursor.y) * 0.24
-        };
-
-        addStrokePoint(cursorRef.current.x, cursorRef.current.y);
-      }
+    const draw = (time: number) => {
+      const frameDelta = Math.min(2.2, Math.max(0.45, (time - lastFrame) / 16.67));
+      lastFrame = time;
 
       context.clearRect(0, 0, window.innerWidth, window.innerHeight);
-      const strokes = strokesRef.current.filter((stroke) => stroke.life > 0);
 
-      fillRibbon(strokes, 0.62, BRUSH_GREEN, 0.68, 18);
-      fillRibbon(strokes, 0.34, CORE_GREEN, 0.42, 8);
-      drawCoreLine(strokes);
+      const target = targetRef.current;
 
-      strokesRef.current = strokes.filter((stroke) => {
-        stroke.life -= 1;
-        return stroke.life > 0;
-      });
+      if (visible && target && finePointer.matches) {
+        if (lastTarget) {
+          const instantSpeed = Math.hypot(
+            target.x - lastTarget.x,
+            target.y - lastTarget.y
+          );
+          speed = lerp(speed, instantSpeed, 1 - Math.pow(1 - 0.28, frameDelta));
+        }
 
-      context.globalAlpha = 1;
-      context.shadowBlur = 0;
+        lastTarget = target;
+        updateChain(target, frameDelta);
+        drawVariableRibbon(chainRef.current);
+        drawHead(target);
+      } else {
+        speed = 0;
+      }
+
       animationId = window.requestAnimationFrame(draw);
     };
 
-    resize();
-    draw();
-
-    const handlePointerMove = (event: PointerEvent) => {
-      targetRef.current = {
+    const move = (event: PointerEvent) => {
+      const point = {
         x: event.clientX,
         y: event.clientY
       };
 
-      if (!cursorRef.current) {
-        cursorRef.current = targetRef.current;
-        addStrokePoint(event.clientX, event.clientY);
+      targetRef.current = point;
+
+      if (!visible || chainRef.current.length !== CHAIN_LENGTH) {
+        seedChain(point);
+        lastTarget = point;
       }
+
+      visible = true;
     };
 
+    const hide = () => {
+      visible = false;
+      targetRef.current = null;
+      lastTarget = null;
+      speed = 0;
+      chainRef.current = [];
+      context.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    };
+
+    resize();
+    animationId = window.requestAnimationFrame(draw);
+
     window.addEventListener("resize", resize);
-    window.addEventListener("pointermove", handlePointerMove);
-    window.addEventListener("pointerleave", resetTarget);
-    window.addEventListener("blur", resetTarget);
+    window.addEventListener("pointermove", move, { passive: true });
+    window.addEventListener("pointerleave", hide);
+    window.addEventListener("blur", hide);
 
     return () => {
       window.cancelAnimationFrame(animationId);
       window.removeEventListener("resize", resize);
-      window.removeEventListener("pointermove", handlePointerMove);
-      window.removeEventListener("pointerleave", resetTarget);
-      window.removeEventListener("blur", resetTarget);
+      window.removeEventListener("pointermove", move);
+      window.removeEventListener("pointerleave", hide);
+      window.removeEventListener("blur", hide);
     };
   }, []);
 
@@ -255,7 +205,7 @@ export function SketchCursor() {
     <canvas
       ref={canvasRef}
       aria-hidden="true"
-      className="cursor-inversion-canvas pointer-events-none fixed inset-0 z-[80]"
+      className="custom-cursor-canvas pointer-events-none fixed inset-0 z-[999]"
     />
   );
 }

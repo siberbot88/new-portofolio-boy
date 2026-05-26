@@ -130,7 +130,7 @@ export function ProjectDetailMatrix({ project }: ProjectDetailMatrixProps) {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="border border-[color:var(--border)] px-4 py-3 transition-colors hover:bg-[#bfffa3] hover:text-[#071a19]"
+                  className="border border-[color:var(--border)] px-4 py-3 transition-colors hover:bg-[var(--accent)] hover:text-[var(--background)]"
                 >
                   Live
                 </a>
@@ -139,7 +139,7 @@ export function ProjectDetailMatrix({ project }: ProjectDetailMatrixProps) {
                 href={project.repoUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="border border-[color:var(--border)] px-4 py-3 transition-colors hover:bg-[#bfffa3] hover:text-[#071a19]"
+                className="border border-[color:var(--border)] px-4 py-3 transition-colors hover:bg-[var(--accent)] hover:text-[var(--background)]"
               >
                 Repository
               </a>
@@ -154,11 +154,11 @@ export function ProjectDetailMatrix({ project }: ProjectDetailMatrixProps) {
                 data-detail-row
                 onMouseEnter={() => activateItem(index)}
                 onFocus={() => activateItem(index)}
-                className="group grid w-full gap-4 border-b border-[color:var(--border)] px-4 py-6 text-left text-[color:var(--muted)] transition-colors duration-300 last:border-b-0 hover:bg-[#bfffa3] hover:text-[#071a19] focus-visible:bg-[#bfffa3] focus-visible:text-[#071a19] md:grid-cols-[8rem_1fr] md:px-8"
+                className="group grid w-full gap-4 border-b border-[color:var(--border)] px-4 py-6 text-left text-[color:var(--muted)] transition-colors duration-300 last:border-b-0 hover:bg-[var(--accent)] hover:text-[var(--background)] focus-visible:bg-[var(--accent)] focus-visible:text-[var(--background)] md:grid-cols-[8rem_1fr] md:px-8"
               >
                 <span className="text-[11px] uppercase">{item.label}</span>
                 <span>
-                  <span className="block text-xl leading-tight text-[var(--foreground)] transition-colors duration-300 group-hover:text-[#071a19] group-focus-visible:text-[#071a19]">
+                  <span className="block text-xl leading-tight text-[var(--foreground)] transition-colors duration-300 group-hover:text-[var(--background)] group-focus-visible:text-[var(--background)]">
                     {item.value}
                   </span>
                   <span className="mt-2 block text-sm">{item.note}</span>
@@ -184,8 +184,8 @@ export function ProjectDetailMatrix({ project }: ProjectDetailMatrixProps) {
               projectTitle={project.title}
               state="in"
             />
-            <div className="absolute inset-0 bg-[#bfffa3] opacity-0 mix-blend-screen transition-opacity duration-300 hover:opacity-60" />
-            <div className="absolute bottom-8 left-8 max-w-[72%] bg-[#bfffa3] px-4 py-3 text-[#071a19]">
+            <div className="absolute inset-0 bg-[var(--accent)] opacity-0 mix-blend-screen transition-opacity duration-300 hover:opacity-60" />
+            <div className="absolute bottom-8 left-8 max-w-[72%] bg-[var(--accent)] px-4 py-3 text-[var(--background)]">
               <p className="text-[11px] uppercase">{activeItem.label}</p>
               <p className="mt-1 text-base leading-tight">{activeItem.note}</p>
             </div>
