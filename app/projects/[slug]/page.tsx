@@ -5,7 +5,6 @@ import { CaseStudySection } from "@/components/CaseStudySection";
 import { FooterNextProject } from "@/components/FooterNextProject";
 import { ProjectDesignSystem } from "@/components/ProjectDesignSystem";
 import { ProjectDetailMatrix } from "@/components/ProjectDetailMatrix";
-import { ProjectOpenCurtain } from "@/components/ProjectOpenCurtain";
 import { getProjectBySlug, projects } from "@/data/projects";
 
 type ProjectPageProps = {
@@ -48,7 +47,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <main>
-      <ProjectOpenCurtain />
       <ProjectDetailMatrix project={project} />
       <ProjectDesignSystem project={project} />
 

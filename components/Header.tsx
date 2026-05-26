@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 function getWibTime() {
@@ -14,7 +15,9 @@ function getWibTime() {
 }
 
 export function Header() {
+  const pathname = usePathname();
   const [time, setTime] = useState("--:--:-- WIB");
+  const activeRoute = pathname.startsWith("/archive") ? "archive" : "selected";
 
   useEffect(() => {
     const timeout = window.setTimeout(() => {
@@ -51,12 +54,35 @@ export function Header() {
           aria-label="Primary navigation"
           className="flex flex-wrap gap-x-6 gap-y-2 text-sm md:col-span-5 md:justify-end md:pr-16"
         >
-          <Link href="/#selected" className="inline-flex items-baseline gap-1">
-            <span className="h-2.5 w-2.5 rounded-full bg-[var(--accent)]" />
-            Selected <sup className="text-[10px] text-[color:var(--muted)]">(07)</sup>
+          <Link
+            href="/#selected"
+            className={`inline-flex items-baseline gap-1 ${
+              activeRoute === "selected" ? "" : "text-[color:var(--muted)]"
+            }`}
+          >
+            <span
+              className={`h-2.5 w-2.5 rounded-full ${
+                activeRoute === "selected"
+                  ? "bg-[var(--accent)]"
+                  : "border border-[color:var(--border)]"
+              }`}
+            />
+            Selected{" "}
+            <sup className="text-[10px] text-[color:var(--muted)]">(07)</sup>
           </Link>
-          <Link href="/archive" className="inline-flex items-baseline gap-1 text-[color:var(--muted)]">
-            <span className="h-2.5 w-2.5 rounded-full border border-[color:var(--border)]" />
+          <Link
+            href="/archive"
+            className={`inline-flex items-baseline gap-1 ${
+              activeRoute === "archive" ? "" : "text-[color:var(--muted)]"
+            }`}
+          >
+            <span
+              className={`h-2.5 w-2.5 rounded-full ${
+                activeRoute === "archive"
+                  ? "bg-[var(--accent)]"
+                  : "border border-[color:var(--border)]"
+              }`}
+            />
             Archive <sup className="text-[10px]">(07)</sup>
           </Link>
           <Link href="mailto:mohammadbayurizkii@gmail.com" className="inline-flex items-baseline gap-1 text-[color:var(--muted)]">

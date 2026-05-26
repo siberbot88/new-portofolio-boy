@@ -1,12 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const email = "mohammadbayurizkii@gmail.com";
 
 export function FloatingMenu() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isProjectDetail = pathname.startsWith("/projects/");
+  const activeRoute = pathname.startsWith("/archive") ? "archive" : "selected";
 
   useEffect(() => {
     const previousOverflow = document.body.style.overflow;
@@ -56,17 +60,37 @@ export function FloatingMenu() {
                 <Link
                   href="/#selected"
                   onClick={closeMenu}
-                  className="inline-flex items-baseline gap-1 font-medium"
+                  className={`inline-flex items-baseline gap-1 ${
+                    activeRoute === "selected"
+                      ? "font-medium"
+                      : "text-[color:var(--muted)]"
+                  }`}
                 >
-                  <span className="h-2.5 w-2.5 rounded-full bg-[var(--accent)]" />
+                  <span
+                    className={`h-2.5 w-2.5 rounded-full ${
+                      activeRoute === "selected"
+                        ? "bg-[var(--accent)]"
+                        : "border border-[color:var(--border)]"
+                    }`}
+                  />
                   Selected <sup className="text-[10px] text-[color:var(--muted)]">(07)</sup>
                 </Link>
                 <Link
                   href="/archive"
                   onClick={closeMenu}
-                  className="inline-flex items-baseline gap-1 text-[color:var(--muted)]"
+                  className={`inline-flex items-baseline gap-1 ${
+                    activeRoute === "archive"
+                      ? "font-medium"
+                      : "text-[color:var(--muted)]"
+                  }`}
                 >
-                  <span className="h-2.5 w-2.5 rounded-full border border-[color:var(--border)]" />
+                  <span
+                    className={`h-2.5 w-2.5 rounded-full ${
+                      activeRoute === "archive"
+                        ? "bg-[var(--accent)]"
+                        : "border border-[color:var(--border)]"
+                    }`}
+                  />
                   Archive <sup className="text-[10px]">(07)</sup>
                 </Link>
                 <a
@@ -176,12 +200,12 @@ export function FloatingMenu() {
         </div>
       ) : null}
 
-      <div className="fixed bottom-5 left-1/2 z-[90] -translate-x-1/2 text-sm">
+      <div className="fixed bottom-5 left-1/2 z-[90] flex -translate-x-1/2 items-center gap-1 rounded-[8px] bg-[rgba(248,248,248,0.08)] p-1 text-sm shadow-[0_0_0_4px_rgba(248,248,248,0.08)] backdrop-blur-sm">
         <button
           type="button"
           aria-expanded={open}
           onClick={() => setOpen((current) => !current)}
-          className={`min-w-32 rounded-[6px] border px-8 py-4 font-medium shadow-[0_0_0_4px_rgba(238,233,228,0.12)] transition-colors ${
+          className={`min-w-32 rounded-[6px] border px-8 py-4 font-medium transition-colors ${
             open
               ? "border-[var(--accent)] bg-[var(--accent)] text-[var(--background)] hover:bg-[var(--foreground)] hover:text-[var(--background)]"
               : "border-[color:var(--border)] bg-[var(--background)] text-[var(--foreground)] hover:bg-[var(--accent)] hover:text-[var(--background)]"
@@ -189,6 +213,16 @@ export function FloatingMenu() {
         >
           {open ? "Close" : "Menu"}
         </button>
+        {isProjectDetail ? (
+          <Link
+            href="/archive"
+            onClick={closeMenu}
+            aria-label="Close project detail and open archive"
+            className="floating-menu-close relative grid h-[52px] w-[52px] place-items-center rounded-[6px] bg-[var(--foreground)] text-[var(--background)] transition-colors hover:bg-[var(--accent)] focus-visible:bg-[var(--accent)]"
+          >
+            <span aria-hidden="true" />
+          </Link>
+        ) : null}
       </div>
     </>
   );

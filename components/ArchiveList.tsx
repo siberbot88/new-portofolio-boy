@@ -177,7 +177,7 @@ export function ArchiveList({ projects }: ArchiveListProps) {
       </section>
 
       <section className="relative border-t border-[color:var(--border)]">
-        <div className="sticky top-[80px] z-30 bg-[var(--background)] px-4 py-4 md:px-8">
+        <div className="archive-filter-bar sticky top-[76px] z-40 bg-[var(--background)] px-4 py-4 md:px-8">
           <ProjectFilter
             categories={categories}
             activeCategory={activeCategory}

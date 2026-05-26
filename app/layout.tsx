@@ -4,6 +4,7 @@ import type { Metadata, Viewport } from "next";
 import { FloatingMenu } from "@/components/FloatingMenu";
 import { Header } from "@/components/Header";
 import { MotionSystem } from "@/components/MotionSystem";
+import { PageTransitionSystem } from "@/components/PageTransitionSystem";
 import { SketchCursor } from "@/components/SketchCursor";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -30,6 +31,7 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
+        <PageTransitionSystem />
         <MotionSystem />
         <SketchCursor />
         {children}
