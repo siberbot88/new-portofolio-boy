@@ -8,7 +8,7 @@ type Point = {
 };
 
 const PALE_GREEN = "#c9fbc6";
-const CHAIN_LENGTH = 46;
+const CHAIN_LENGTH = 34;
 const HEAD_RADIUS = 8;
 
 function lerp(current: number, target: number, amount: number) {
@@ -40,7 +40,7 @@ export function SketchCursor() {
     let speed = 0;
 
     const resize = () => {
-      const ratio = window.devicePixelRatio || 1;
+      const ratio = Math.min(window.devicePixelRatio || 1, 1.5);
       canvas.width = Math.floor(window.innerWidth * ratio);
       canvas.height = Math.floor(window.innerHeight * ratio);
       canvas.style.width = `${window.innerWidth}px`;

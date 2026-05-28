@@ -44,6 +44,33 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   const nextProject = getProjectBySlug(project.nextProjectSlug) ?? projects[0];
+  const solutionCardClass =
+    "solution-card block overflow-hidden border border-[color:var(--border)] bg-[var(--surface)]";
+  const renderSolutionCardContent = (item: (typeof project.solution)[number]) => (
+    <>
+      <div className="relative aspect-video border-b border-[color:var(--border)] bg-[var(--background)]">
+        <Image
+          src={item.image}
+          alt={item.alt}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover"
+        />
+      </div>
+      <div className="p-5 md:p-6">
+        <h3 className="text-lg font-medium">{item.title}</h3>
+        <p className="mt-3 text-base leading-7 text-[color:var(--muted)]">
+          {item.description}
+        </p>
+        {item.url ? (
+          <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[var(--foreground)]">
+            {item.actionLabel ?? "Open live preview"}
+            <span aria-hidden="true">-&gt;</span>
+          </span>
+        ) : null}
+      </div>
+    </>
+  );
 
   return (
     <main>
@@ -103,30 +130,31 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       <CaseStudySection label="03 / Solution" title="The Solution">
         <div className="grid gap-4 md:grid-cols-2">
-          {project.solution.map((item) => (
-            <figure
-              key={item.title}
-              data-case-reveal
-              data-solution-card
-              className="solution-card overflow-hidden border border-[color:var(--border)] bg-[var(--surface)]"
-            >
-              <div className="relative aspect-video border-b border-[color:var(--border)] bg-[var(--background)]">
-                <Image
-                  src={item.image}
-                  alt={item.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-              <figcaption className="p-5 md:p-6">
-                <h3 className="text-lg font-medium">{item.title}</h3>
-                <p className="mt-3 text-base leading-7 text-[color:var(--muted)]">
-                  {item.description}
-                </p>
-              </figcaption>
-            </figure>
-          ))}
+          {project.solution.map((item) =>
+            item.url ? (
+              <a
+                key={item.title}
+                data-case-reveal
+                data-solution-card
+                className={solutionCardClass}
+                href={item.url}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`${item.title} - open live preview`}
+              >
+                {renderSolutionCardContent(item)}
+              </a>
+            ) : (
+              <figure
+                key={item.title}
+                data-case-reveal
+                data-solution-card
+                className={solutionCardClass}
+              >
+                {renderSolutionCardContent(item)}
+              </figure>
+            )
+          )}
         </div>
       </CaseStudySection>
 

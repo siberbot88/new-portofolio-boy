@@ -1,4 +1,5 @@
 import { ProjectIndexTable } from "@/components/ProjectIndexTable";
+import { DesignUiUxGallery } from "@/components/DesignUiUxGallery";
 import { projects } from "@/data/projects";
 
 export default function Home() {
@@ -23,6 +24,8 @@ export default function Home() {
             Flat Architecture
           </p>
         </div>
+
+        <DesignUiUxGallery />
       </section>
     </main>
   );

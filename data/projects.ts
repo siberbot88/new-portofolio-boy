@@ -10,6 +10,8 @@ export type SolutionArtifact = {
   description: string;
   image: string;
   alt: string;
+  url?: string;
+  actionLabel?: string;
 };
 
 export type ImpactMetric = {
@@ -605,6 +607,1134 @@ export const projects: Project[] = [
         label: "Product Endpoints",
         description:
           "The backend exposes product list, category filter, and product detail endpoints."
+      }
+    ],
+    nextProjectSlug: "web-blogging-siberbot88"
+  },
+  {
+    id: "project-08",
+    slug: "web-blogging-siberbot88",
+    number: "08",
+    year: "2026",
+    title: "Web Blogging Siberbot88",
+    client: "Fyndra / Personal Blogging Website",
+    category: "Portfolio / Web",
+    discipline: "Frontend Website",
+    role: "Frontend Development / Content Interface",
+    duration: "Website build",
+    techStack: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+    thumbnail: "/projects/github/web-blogging-siberbot88.webp",
+    heroImage: "/projects/github/web-blogging-siberbot88.webp",
+    repoUrl: "https://github.com/siberbot88/Web-Blogging-Siberbot88",
+    liveUrl: "https://fyndra.netlify.app/",
+    summary:
+      "A personal blogging and profile website with a dark visual identity, navigation, project sections, and blog-oriented content structure.",
+    challenge:
+      "The site needed to combine personal identity, project navigation, and blog presentation without feeling like a generic static homepage.",
+    methodology: [
+      {
+        title: "Brand Layout",
+        description:
+          "Designed a personal hero, social links, and section navigation around a consistent dark portfolio mood.",
+        artifact: "Website shell",
+        signal: "82%"
+      },
+      {
+        title: "Content Sections",
+        description:
+          "Separated home, about, project, blog, and contact areas so visitors can move through the profile quickly.",
+        artifact: "5 sections",
+        signal: "78%"
+      },
+      {
+        title: "Static Delivery",
+        description:
+          "Kept the implementation lightweight for Netlify deployment and simple content iteration.",
+        artifact: "Netlify deploy",
+        signal: "76%"
+      }
+    ],
+    solution: [
+      {
+        title: "Personal Blog Homepage",
+        description:
+          "A dark personal website with profile navigation, project access, blog entry points, and external social links.",
+        image: "/projects/github/web-blogging-siberbot88.webp",
+        alt: "Web Blogging Siberbot88 homepage preview"
+      },
+      {
+        title: "Lightweight Static Frontend",
+        description:
+          "The project uses simple web fundamentals to keep the portfolio and blog surface easy to host and maintain.",
+        image: "/projects/github/web-blogging-siberbot88.webp",
+        alt: "Web Blogging Siberbot88 static frontend preview"
+      }
+    ],
+    impactMetrics: [
+      {
+        value: "05",
+        label: "Main Sections",
+        description:
+          "The site organizes identity, about, projects, blog, and contact in one browsing flow."
+      },
+      {
+        value: "HTML",
+        label: "Core Stack",
+        description:
+          "The repository is mostly HTML with CSS and JavaScript for presentation behavior."
+      },
+      {
+        value: "Live",
+        label: "Published Site",
+        description:
+          "The project is deployed publicly through Netlify."
+      }
+    ],
+    nextProjectSlug: "liora-match-platform"
+  },
+  {
+    id: "project-09",
+    slug: "liora-match-platform",
+    number: "09",
+    year: "2025",
+    title: "Liora Match Platform",
+    client: "Liora Match / EdTech Marketplace",
+    category: "Mobile / Platform",
+    discipline: "Full-Stack Product System",
+    role: "Product Architecture / Mobile and Web Development",
+    duration: "Platform build",
+    techStack: ["NestJS", "Next.js", "React Native", "MySQL", "Prisma"],
+    thumbnail: "/projects/github/liora.png",
+    heroImage: "/projects/github/liora.png",
+    repoUrl: "https://github.com/siberbot88/liora-match-app",
+    liveUrl: "https://lioramatch.netlify.app/",
+    summary:
+      "A full-stack online learning platform connecting educators and students through mobile, landing, admin, pricing, messaging, and payment workflows.",
+    challenge:
+      "The product needed to handle different user roles, teaching formats, and pricing models across web, mobile, and backend services.",
+    methodology: [
+      {
+        title: "Role Architecture",
+        description:
+          "Mapped separate workflows for students, teachers, and superadmins across mobile and web surfaces.",
+        artifact: "3 role groups",
+        signal: "90%"
+      },
+      {
+        title: "Learning Commerce",
+        description:
+          "Modeled online courses, private tutoring, public lessons, assignments, bookings, and payments in one platform.",
+        artifact: "EdTech model",
+        signal: "88%"
+      },
+      {
+        title: "Service Layer",
+        description:
+          "Organized NestJS, Prisma, MySQL, Redis, Firebase, Socket.io, and Midtrans into a deployable platform stack.",
+        artifact: "Full stack",
+        signal: "86%"
+      }
+    ],
+    solution: [
+      {
+        title: "Mobile Learning Experience",
+        description:
+          "The mobile UI supports discovery, profile setup, lesson matching, progress, messaging, and student flows.",
+        image: "/projects/github/liora.png",
+        alt: "Liora Match mobile application UI preview"
+      },
+      {
+        title: "Backend and Admin System",
+        description:
+          "The platform includes REST APIs, real-time messaging, Firebase authentication, Midtrans payment, and admin management.",
+        image: "/projects/github/liora.png",
+        alt: "Liora Match platform landing preview",
+        url: "https://lioramatch.netlify.app/",
+        actionLabel: "Open backend/admin"
+      }
+    ],
+    impactMetrics: [
+      {
+        value: "15+",
+        label: "Data Models",
+        description:
+          "The README describes user, class, booking, session, transaction, message, and notification models."
+      },
+      {
+        value: "03",
+        label: "Client Layers",
+        description:
+          "The architecture covers mobile app, admin panel, and landing website."
+      },
+      {
+        value: "Pay",
+        label: "Payment Flow",
+        description:
+          "Midtrans support is included for the learning commerce layer."
+      }
+    ],
+    nextProjectSlug: "machine-learning-tracker"
+  },
+  {
+    id: "project-10",
+    slug: "machine-learning-tracker",
+    number: "10",
+    year: "2026",
+    title: "Machine Learning Tracker",
+    client: "Siberbot / ML Learning Roadmap",
+    category: "Data Science / ML",
+    discipline: "Learning Productivity Tool",
+    role: "Frontend Development / Learning System Design",
+    duration: "Tracker build",
+    techStack: ["TypeScript", "React", "Next.js", "Vercel"],
+    thumbnail: "/projects/github/machine-learning-tracker.webp",
+    heroImage: "/projects/github/machine-learning-tracker.webp",
+    repoUrl: "https://github.com/siberbot88/Machine-Learning-Tracker",
+    liveUrl: "https://machine-learning-tracker.vercel.app/",
+    summary:
+      "A learning companion for tracking a machine learning roadmap, weekly tasks, submissions, and structured progress toward AI and data science goals.",
+    challenge:
+      "Self-paced machine learning study needed a clearer structure than scattered notes, with progress and submission tracking visible from the start.",
+    methodology: [
+      {
+        title: "Roadmap Framing",
+        description:
+          "Turned the ML learning journey into a weekly progression from foundations toward deeper AI topics.",
+        artifact: "12-week path",
+        signal: "84%"
+      },
+      {
+        title: "Task Status Design",
+        description:
+          "Created a task management structure so study items can move through clear progress states.",
+        artifact: "Task board",
+        signal: "82%"
+      },
+      {
+        title: "Submission Tracking",
+        description:
+          "Added a portfolio-like layer for notebooks, repositories, or learning evidence to be saved against the roadmap.",
+        artifact: "Evidence log",
+        signal: "80%"
+      }
+    ],
+    solution: [
+      {
+        title: "ML Roadmap Landing",
+        description:
+          "The homepage introduces a structured machine learning journey with a clear start action and GitHub access.",
+        image: "/projects/github/machine-learning-tracker.webp",
+        alt: "Machine Learning Tracker landing page preview"
+      },
+      {
+        title: "Systematic Study Interface",
+        description:
+          "Feature sections frame roadmap, task management, and submission tracking as a focused study system.",
+        image: "/projects/github/machine-learning-tracker.webp",
+        alt: "Machine Learning Tracker feature interface preview"
+      }
+    ],
+    impactMetrics: [
+      {
+        value: "12",
+        label: "Week Roadmap",
+        description:
+          "The app positions the learning flow as a twelve-week machine learning track."
+      },
+      {
+        value: "Tasks",
+        label: "Study States",
+        description:
+          "The tracker supports task progress for structured learning follow-through."
+      },
+      {
+        value: "Live",
+        label: "Vercel Deploy",
+        description:
+          "The project is available as a public web application."
+      }
+    ],
+    nextProjectSlug: "legacy-portfolio"
+  },
+  {
+    id: "project-11",
+    slug: "legacy-portfolio",
+    number: "11",
+    year: "2025",
+    title: "Legacy Portfolio Website",
+    client: "Mohammad Bayu Rizki / Earlier Portfolio",
+    category: "Portfolio / Web",
+    discipline: "Personal Website",
+    role: "Frontend Development / Portfolio Design",
+    duration: "Portfolio build",
+    techStack: ["JavaScript", "React", "Netlify"],
+    thumbnail: "/projects/github/legacy-portfolio.webp",
+    heroImage: "/projects/github/legacy-portfolio.webp",
+    repoUrl: "https://github.com/siberbot88/portofolio",
+    liveUrl: "https://portofoliomohbayu.netlify.app/",
+    summary:
+      "An earlier personal portfolio site presenting identity, project highlights, and frontend development practice through a published Netlify build.",
+    challenge:
+      "The portfolio needed to introduce skills and work in a straightforward format before the current archive-driven portfolio system existed.",
+    methodology: [
+      {
+        title: "Identity Page",
+        description:
+          "Built the main page around personal identity, summary, and portfolio navigation.",
+        artifact: "Hero profile",
+        signal: "78%"
+      },
+      {
+        title: "Project Showcase",
+        description:
+          "Organized portfolio content into visible project areas for quick scanning.",
+        artifact: "Showcase page",
+        signal: "76%"
+      },
+      {
+        title: "Hosted Iteration",
+        description:
+          "Published the site on Netlify as a stable earlier version of the portfolio.",
+        artifact: "Netlify site",
+        signal: "74%"
+      }
+    ],
+    solution: [
+      {
+        title: "Earlier Portfolio Snapshot",
+        description:
+          "A published personal portfolio representing the previous visual and content direction.",
+        image: "/projects/github/legacy-portfolio.webp",
+        alt: "Legacy portfolio website preview"
+      },
+      {
+        title: "Portfolio Baseline",
+        description:
+          "The project provided a foundation for later improvements in archive structure, interaction, and case-study depth.",
+        image: "/projects/github/legacy-portfolio.webp",
+        alt: "Legacy portfolio baseline interface preview"
+      }
+    ],
+    impactMetrics: [
+      {
+        value: "Live",
+        label: "Published",
+        description:
+          "The portfolio is deployed publicly through Netlify."
+      },
+      {
+        value: "React",
+        label: "Frontend Stack",
+        description:
+          "The project uses JavaScript frontend development patterns."
+      },
+      {
+        value: "V1",
+        label: "Portfolio Iteration",
+        description:
+          "The site acts as an earlier milestone before the current archive system."
+      }
+    ],
+    nextProjectSlug: "academic-web-portfolio"
+  },
+  {
+    id: "project-12",
+    slug: "academic-web-portfolio",
+    number: "12",
+    year: "2025",
+    title: "Academic Web Portfolio",
+    client: "University Web Portfolio / 23082010054",
+    category: "Portfolio / Web",
+    discipline: "Static Website",
+    role: "Frontend Development / Academic Submission",
+    duration: "Course project",
+    techStack: ["HTML", "CSS", "JavaScript", "Vercel"],
+    thumbnail: "/projects/github/academic-web-portfolio.webp",
+    heroImage: "/projects/github/academic-web-portfolio.webp",
+    repoUrl: "https://github.com/siberbot88/23082010054-Mohammad-Bayu-Rizki-web-porto",
+    liveUrl: "https://23082010054-mohammad-bayu-rizki-web.vercel.app/",
+    summary:
+      "A course portfolio website for presenting identity, academic profile, and web fundamentals through a deployed static interface.",
+    challenge:
+      "The site needed to satisfy academic web requirements while still functioning as a readable personal profile.",
+    methodology: [
+      {
+        title: "Academic Brief",
+        description:
+          "Structured the content around student identity, portfolio information, and required web sections.",
+        artifact: "Course scope",
+        signal: "77%"
+      },
+      {
+        title: "Responsive Basics",
+        description:
+          "Applied HTML, CSS, and JavaScript fundamentals for a deployable static site.",
+        artifact: "Static stack",
+        signal: "75%"
+      },
+      {
+        title: "Vercel Publish",
+        description:
+          "Used Vercel deployment to make the project accessible as a live web submission.",
+        artifact: "Live URL",
+        signal: "74%"
+      }
+    ],
+    solution: [
+      {
+        title: "Academic Profile Page",
+        description:
+          "A deployed portfolio page made for university web development practice and identity presentation.",
+        image: "/projects/github/academic-web-portfolio.webp",
+        alt: "Academic web portfolio preview"
+      },
+      {
+        title: "Static Web Foundation",
+        description:
+          "The project documents basic frontend structure before later portfolio versions became more product-focused.",
+        image: "/projects/github/academic-web-portfolio.webp",
+        alt: "Academic static portfolio interface preview"
+      }
+    ],
+    impactMetrics: [
+      {
+        value: "HTML",
+        label: "Core Build",
+        description:
+          "The repository is primarily a static web project."
+      },
+      {
+        value: "Vercel",
+        label: "Deployment",
+        description:
+          "The academic portfolio is available through a public Vercel link."
+      },
+      {
+        value: "Course",
+        label: "Submission",
+        description:
+          "The site is framed around a university web portfolio deliverable."
+      }
+    ],
+    nextProjectSlug: "current-portfolio-system"
+  },
+  {
+    id: "project-13",
+    slug: "current-portfolio-system",
+    number: "13",
+    year: "2026",
+    title: "Current Portfolio System",
+    client: "Mohammad Bayu Rizki / Archive Portfolio",
+    category: "Portfolio / Web",
+    discipline: "Next.js Portfolio System",
+    role: "Frontend Architecture / Interaction Design",
+    duration: "Portfolio system",
+    techStack: ["Next.js", "TypeScript", "React", "Tailwind CSS", "GSAP"],
+    thumbnail: "/projects/github/current-portfolio-system.webp",
+    heroImage: "/projects/github/current-portfolio-system.webp",
+    repoUrl: "https://github.com/siberbot88/new-portofolio-boy",
+    liveUrl: "https://new-portofolio-boy.vercel.app",
+    summary:
+      "A modern archive-based portfolio system for case studies, project filtering, motion, visual archive views, and portfolio storytelling.",
+    challenge:
+      "The portfolio needed to scale beyond a landing page into an archive that can carry dashboards, platforms, ML, games, UI/UX, and older work.",
+    methodology: [
+      {
+        title: "Archive Structure",
+        description:
+          "Built project data, filters, visual previews, archive pages, and detail pages around a single project model.",
+        artifact: "Project index",
+        signal: "90%"
+      },
+      {
+        title: "Motion System",
+        description:
+          "Added page transitions, scroll reveals, custom cursor, carousel motion, and archive view interactions.",
+        artifact: "Motion layer",
+        signal: "86%"
+      },
+      {
+        title: "Performance Pass",
+        description:
+          "Optimized heavy UI/UX image previews and scroll work so the archive remains usable with more projects.",
+        artifact: "Asset pass",
+        signal: "84%"
+      }
+    ],
+    solution: [
+      {
+        title: "Archive Portfolio Interface",
+        description:
+          "The current portfolio combines index, visual carousel, archive table, visual archive, case studies, and footer contact paths.",
+        image: "/projects/github/current-portfolio-system.webp",
+        alt: "Current portfolio system preview"
+      },
+      {
+        title: "Expandable Case Study Model",
+        description:
+          "Project entries drive cards, filters, hero visuals, solution sections, methodology, impact metrics, and next-project navigation.",
+        image: "/projects/github/current-portfolio-system.webp",
+        alt: "Current archive portfolio interface preview"
+      }
+    ],
+    impactMetrics: [
+      {
+        value: "Next",
+        label: "App Router",
+        description:
+          "The portfolio is built on Next.js with TypeScript project data."
+      },
+      {
+        value: "02",
+        label: "Archive Views",
+        description:
+          "The archive supports both table and visual browsing modes."
+      },
+      {
+        value: "21",
+        label: "Projects Ready",
+        description:
+          "The archive now carries the selected polished GitHub projects alongside the original case studies."
+      }
+    ],
+    nextProjectSlug: "sokoban-game-python"
+  },
+  {
+    id: "project-14",
+    slug: "sokoban-game-python",
+    number: "14",
+    year: "2025",
+    title: "Sokoban Game in Python",
+    client: "Python Puzzle Game / Course Build",
+    category: "Game / Interactive",
+    discipline: "Game Logic Programming",
+    role: "Python Development / Game Logic",
+    duration: "Game prototype",
+    techStack: ["Python", "Game Logic", "Grid System"],
+    thumbnail: "/projects/github/sokoban-game-python.webp",
+    heroImage: "/projects/github/sokoban-game-python.webp",
+    repoUrl: "https://github.com/siberbot88/Sokoban-game-in-python",
+    summary:
+      "A Python implementation of Sokoban-style box pushing gameplay focused on grid movement, player actions, walls, targets, and puzzle state logic.",
+    challenge:
+      "Sokoban gameplay requires strict movement rules because each move can change whether the puzzle remains solvable.",
+    methodology: [
+      {
+        title: "Grid Modeling",
+        description:
+          "Represented walls, spaces, targets, boxes, and the player as a state-based puzzle board.",
+        artifact: "Board state",
+        signal: "78%"
+      },
+      {
+        title: "Movement Rules",
+        description:
+          "Implemented push constraints so boxes only move when the target cell is valid.",
+        artifact: "Game rules",
+        signal: "80%"
+      },
+      {
+        title: "Puzzle Feedback",
+        description:
+          "Structured the game loop around move validation, board redraw, and win-state checks.",
+        artifact: "Loop logic",
+        signal: "76%"
+      }
+    ],
+    solution: [
+      {
+        title: "Sokoban Puzzle Core",
+        description:
+          "A compact game logic project that practices state management through classic box-pushing puzzles.",
+        image: "/projects/github/sokoban-game-python.webp",
+        alt: "Sokoban Game in Python project card"
+      },
+      {
+        title: "Python Gameplay Prototype",
+        description:
+          "The project focuses on rules, levels, and clear movement constraints instead of visual-heavy presentation.",
+        image: "/projects/github/sokoban-game-python.webp",
+        alt: "Sokoban Python gameplay logic preview"
+      }
+    ],
+    impactMetrics: [
+      {
+        value: "Grid",
+        label: "State System",
+        description:
+          "The project centers on board-state updates and cell validation."
+      },
+      {
+        value: "Rules",
+        label: "Puzzle Logic",
+        description:
+          "Movement and push behavior are the primary technical challenge."
+      },
+      {
+        value: "Py",
+        label: "Language",
+        description:
+          "The repo is a Python game programming exercise."
+      }
+    ],
+    nextProjectSlug: "ucommodity-ecommerce"
+  },
+  {
+    id: "project-15",
+    slug: "ucommodity-ecommerce",
+    number: "15",
+    year: "2026",
+    title: "UCommodity Ecommerce",
+    client: "UCommodity / Agriculture Commerce",
+    category: "E-commerce / Platform",
+    discipline: "Laravel Commerce",
+    role: "Full-Stack Web Development",
+    duration: "Commerce build",
+    techStack: ["Laravel", "Blade", "PHP", "MySQL"],
+    thumbnail: "/projects/github/ucommodity-ecommerce.webp",
+    heroImage: "/projects/github/ucommodity-ecommerce.webp",
+    repoUrl: "https://github.com/siberbot88/UCommodity-Ecommerce",
+    summary:
+      "An e-commerce platform concept for ornamental plants and agricultural products with catalog, cart, checkout, and storefront workflows.",
+    challenge:
+      "Agriculture commerce needs product browsing and ordering flows that can represent plants, garden goods, and harvest commodities clearly.",
+    methodology: [
+      {
+        title: "Catalog Planning",
+        description:
+          "Modeled product categories, product display, and browsing paths for agriculture-related goods.",
+        artifact: "Product catalog",
+        signal: "82%"
+      },
+      {
+        title: "Cart Flow",
+        description:
+          "Structured cart and checkout behavior as the core commercial workflow.",
+        artifact: "Purchase path",
+        signal: "80%"
+      },
+      {
+        title: "Laravel Build",
+        description:
+          "Used Laravel and Blade patterns to keep storefront, routing, and backend behavior connected.",
+        artifact: "MVC stack",
+        signal: "78%"
+      }
+    ],
+    solution: [
+      {
+        title: "Agriculture Storefront",
+        description:
+          "A commerce system for presenting agriculture and ornamental plant products through a dedicated storefront.",
+        image: "/projects/github/ucommodity-ecommerce.webp",
+        alt: "UCommodity Ecommerce project card"
+      },
+      {
+        title: "Order Flow Foundation",
+        description:
+          "The platform frames product discovery, cart management, and checkout as one integrated transaction flow.",
+        image: "/projects/github/ucommodity-ecommerce.webp",
+        alt: "UCommodity commerce workflow preview"
+      }
+    ],
+    impactMetrics: [
+      {
+        value: "Store",
+        label: "Commerce Flow",
+        description:
+          "The project covers catalog-to-checkout e-commerce behavior."
+      },
+      {
+        value: "Agri",
+        label: "Domain",
+        description:
+          "The product category focuses on plants and agricultural goods."
+      },
+      {
+        value: "Blade",
+        label: "Stack",
+        description:
+          "The repository language is primarily Laravel Blade."
+      }
+    ],
+    nextProjectSlug: "personal-academic-manager"
+  },
+  {
+    id: "project-16",
+    slug: "personal-academic-manager",
+    number: "16",
+    year: "2026",
+    title: "Personal Academic Manager",
+    client: "Academic Productivity / Personal System",
+    category: "Productivity / Tool",
+    discipline: "Task and Study Management",
+    role: "Product Design / PHP Development",
+    duration: "Productivity build",
+    techStack: ["PHP", "Web App", "Checklist Logic"],
+    thumbnail: "/projects/github/personal-academic-manager.webp",
+    heroImage: "/projects/github/personal-academic-manager.webp",
+    repoUrl: "https://github.com/siberbot88/personal-academic-manager",
+    summary:
+      "A personal academic manager for tasks, early-start planning, study sessions, inbox capture, progress checklists, and health scoring.",
+    challenge:
+      "Academic workload can become reactive, so the system needed to split assignments into actionable phases before deadlines create panic.",
+    methodology: [
+      {
+        title: "Deadline Breakdown",
+        description:
+          "Used auto-splitting phases and checklist progress to turn large tasks into smaller execution steps.",
+        artifact: "Phase planner",
+        signal: "86%"
+      },
+      {
+        title: "Study Rhythm",
+        description:
+          "Framed the system around weekly study sessions and a top-priority dashboard.",
+        artifact: "Top 3",
+        signal: "82%"
+      },
+      {
+        title: "Capture Layer",
+        description:
+          "Added an inbox capture concept for files and links from WhatsApp or Drive references.",
+        artifact: "Inbox",
+        signal: "80%"
+      }
+    ],
+    solution: [
+      {
+        title: "Academic Control Panel",
+        description:
+          "A personal productivity system for tracking assignments, sessions, captured resources, and study health.",
+        image: "/projects/github/personal-academic-manager.webp",
+        alt: "Personal Academic Manager project card"
+      },
+      {
+        title: "Anti-Stagnation Workflow",
+        description:
+          "The app emphasizes earlier starts, visible progress, and weekly accountability through structured task states.",
+        image: "/projects/github/personal-academic-manager.webp",
+        alt: "Personal Academic Manager workflow preview"
+      }
+    ],
+    impactMetrics: [
+      {
+        value: "Top 3",
+        label: "Focus System",
+        description:
+          "The dashboard prioritizes the most important academic tasks."
+      },
+      {
+        value: "5x",
+        label: "Study Sessions",
+        description:
+          "The repo description targets five study sessions per week."
+      },
+      {
+        value: "Score",
+        label: "Health Signal",
+        description:
+          "A health score is used to detect stagnation and panic risk."
+      }
+    ],
+    nextProjectSlug: "insta-nutri-calc"
+  },
+  {
+    id: "project-17",
+    slug: "insta-nutri-calc",
+    number: "17",
+    year: "2025",
+    title: "Insta Nutri Calc",
+    client: "Nutrition Utility / Instant Food",
+    category: "Utility / Tool",
+    discipline: "Nutrition Calculator",
+    role: "Frontend Development / Utility Design",
+    duration: "Utility build",
+    techStack: ["HTML", "JavaScript", "Tailwind CSS"],
+    thumbnail: "/projects/github/insta-nutri-calc.webp",
+    heroImage: "/projects/github/insta-nutri-calc.webp",
+    repoUrl: "https://github.com/siberbot88/insta-nutri-calc",
+    summary:
+      "A web utility for calculating instant food nutrition with real-time food search, daily consumption lists, and automatic calorie and macro summaries.",
+    challenge:
+      "Instant food tracking needs to be quick enough for daily use while still showing calorie, protein, carbohydrate, and fat totals clearly.",
+    methodology: [
+      {
+        title: "Food Search",
+        description:
+          "Built real-time search interaction so users can quickly find and add consumed items.",
+        artifact: "Search UI",
+        signal: "82%"
+      },
+      {
+        title: "Macro Summary",
+        description:
+          "Grouped calories, protein, carbohydrates, and fat into a clear daily summary.",
+        artifact: "Nutrition totals",
+        signal: "80%"
+      },
+      {
+        title: "Responsive Utility",
+        description:
+          "Kept the layout compact and mobile-friendly for fast entry and review.",
+        artifact: "Responsive page",
+        signal: "78%"
+      }
+    ],
+    solution: [
+      {
+        title: "Nutrition Calculator",
+        description:
+          "A lightweight daily nutrition tracker tailored to instant food entries and quick macro totals.",
+        image: "/projects/github/insta-nutri-calc.webp",
+        alt: "Insta Nutri Calc project card"
+      },
+      {
+        title: "Fast Food Entry Flow",
+        description:
+          "The interface prioritizes search, add-to-list behavior, and automatic nutritional summaries.",
+        image: "/projects/github/insta-nutri-calc.webp",
+        alt: "Insta Nutri Calc nutrition workflow preview"
+      }
+    ],
+    impactMetrics: [
+      {
+        value: "04",
+        label: "Macro Totals",
+        description:
+          "Calories, protein, carbohydrates, and fat are summarized automatically."
+      },
+      {
+        value: "Live",
+        label: "Utility Pattern",
+        description:
+          "The project is designed as a single-purpose utility workflow."
+      },
+      {
+        value: "CSS",
+        label: "Repo Language",
+        description:
+          "The repository uses Tailwind-oriented frontend styling."
+      }
+    ],
+    nextProjectSlug: "harvestfarm-mobile"
+  },
+  {
+    id: "project-18",
+    slug: "harvestfarm-mobile",
+    number: "18",
+    year: "2025",
+    title: "HarvestFarm Mobile",
+    client: "HarvestFarm / Agriculture Sales",
+    category: "Mobile / Platform",
+    discipline: "Mobile Commerce",
+    role: "Mobile Development / Product UI",
+    duration: "Mobile app build",
+    techStack: ["Kotlin", "Android", "Mobile UI"],
+    thumbnail: "/projects/design-ui-ux/optimized/Harversfarm-APP.webp",
+    heroImage: "/projects/design-ui-ux/optimized/Harversfarm-APP.webp",
+    repoUrl: "https://github.com/siberbot88/Harvestfarm-mobile-version",
+    summary:
+      "A mobile application concept for agricultural product sales, connecting harvest product browsing with ordering and farm-commerce interactions.",
+    challenge:
+      "Farm produce commerce needs a mobile-first interface that can represent fresh products, order intent, and transaction steps clearly.",
+    methodology: [
+      {
+        title: "Mobile Catalog",
+        description:
+          "Designed the product surface around farm goods, visual product cards, and mobile browsing.",
+        artifact: "Catalog UI",
+        signal: "82%"
+      },
+      {
+        title: "Order Journey",
+        description:
+          "Mapped product selection, cart-like behavior, and buyer actions for mobile use.",
+        artifact: "Order flow",
+        signal: "80%"
+      },
+      {
+        title: "Android Build",
+        description:
+          "Implemented the mobile version with Kotlin as the application foundation.",
+        artifact: "Kotlin app",
+        signal: "78%"
+      }
+    ],
+    solution: [
+      {
+        title: "Farm Commerce Mobile UI",
+        description:
+          "A mobile storefront direction for browsing and ordering agricultural products.",
+        image: "/projects/design-ui-ux/optimized/Harversfarm-APP.webp",
+        alt: "HarvestFarm mobile application UI preview"
+      },
+      {
+        title: "Agriculture Sales Flow",
+        description:
+          "The app frames farmer product presentation and buyer action through a focused mobile experience.",
+        image: "/projects/design-ui-ux/optimized/Harversfarm-APP.webp",
+        alt: "HarvestFarm mobile commerce workflow preview"
+      }
+    ],
+    impactMetrics: [
+      {
+        value: "Kotlin",
+        label: "Mobile Stack",
+        description:
+          "The repository language is Kotlin for Android development."
+      },
+      {
+        value: "Agri",
+        label: "Commerce Domain",
+        description:
+          "The product focuses on farm produce and agricultural sales."
+      },
+      {
+        value: "App",
+        label: "Mobile Surface",
+        description:
+          "The project extends the HarvestFarm concept into a mobile version."
+      }
+    ],
+    nextProjectSlug: "bbi-hub-applications"
+  },
+  {
+    id: "project-19",
+    slug: "bbi-hub-applications",
+    number: "19",
+    year: "2025",
+    title: "BBI HUB Applications",
+    client: "BBI HUB / Internal Operations",
+    category: "Web App / Platform",
+    discipline: "Laravel Operations System",
+    role: "Full-Stack Development / UI Implementation",
+    duration: "Application build",
+    techStack: ["Laravel", "Blade", "PHP", "MySQL"],
+    thumbnail: "/projects/design-ui-ux/optimized/BBIHUB.webp",
+    heroImage: "/projects/design-ui-ux/optimized/BBIHUB.webp",
+    repoUrl: "https://github.com/siberbot88/BBI-HUB-applications",
+    summary:
+      "An internal hub application concept for coordinating operational data, records, users, and business process workflows in a centralized web platform.",
+    challenge:
+      "Operational teams need a hub that can keep records and workflows accessible without scattering information across disconnected tools.",
+    methodology: [
+      {
+        title: "Process Mapping",
+        description:
+          "Identified the main operational surfaces that need to be centralized in a hub-style application.",
+        artifact: "Workflow map",
+        signal: "82%"
+      },
+      {
+        title: "Dashboard Structure",
+        description:
+          "Organized navigation, data pages, and management views into an application shell.",
+        artifact: "Hub UI",
+        signal: "80%"
+      },
+      {
+        title: "Laravel Foundation",
+        description:
+          "Used Laravel and Blade as the base for web routing, views, and data operations.",
+        artifact: "MVC app",
+        signal: "78%"
+      }
+    ],
+    solution: [
+      {
+        title: "Internal Hub Interface",
+        description:
+          "A web application direction for centralizing business records and operational activities.",
+        image: "/projects/design-ui-ux/optimized/BBIHUB.webp",
+        alt: "BBI HUB application UI preview"
+      },
+      {
+        title: "Operations Platform Base",
+        description:
+          "The project frames Laravel as a practical foundation for an internal business application.",
+        image: "/projects/design-ui-ux/optimized/BBIHUB.webp",
+        alt: "BBI HUB operations platform preview"
+      }
+    ],
+    impactMetrics: [
+      {
+        value: "Hub",
+        label: "System Type",
+        description:
+          "The application is framed as a centralized internal platform."
+      },
+      {
+        value: "Blade",
+        label: "Frontend Layer",
+        description:
+          "The repository uses Laravel Blade for presentation."
+      },
+      {
+        value: "Ops",
+        label: "Use Case",
+        description:
+          "The project focuses on operational coordination and management."
+      }
+    ],
+    nextProjectSlug: "ngekoss-app-laravel"
+  },
+  {
+    id: "project-20",
+    slug: "ngekoss-app-laravel",
+    number: "20",
+    year: "2025",
+    title: "Ngekoss App Laravel",
+    client: "Ngekoss / Housing Platform",
+    category: "Web App / Platform",
+    discipline: "Rental Listing System",
+    role: "Laravel Development / Platform Build",
+    duration: "Web app build",
+    techStack: ["Laravel", "PHP", "MySQL", "Blade"],
+    thumbnail: "/projects/github/ngekoss-app-laravel.webp",
+    heroImage: "/projects/github/ngekoss-app-laravel.webp",
+    repoUrl: "https://github.com/siberbot88/ngekoss_app_Laravel",
+    summary:
+      "A Laravel-based housing platform concept for kost discovery, listing management, and rental information workflows.",
+    challenge:
+      "Kost search needs structured listing information so users can compare options without relying on scattered chat or manual notes.",
+    methodology: [
+      {
+        title: "Listing Model",
+        description:
+          "Structured the application around room, location, price, and availability-style information.",
+        artifact: "Kost data",
+        signal: "78%"
+      },
+      {
+        title: "Search Surface",
+        description:
+          "Framed the browsing experience around discovery and comparison of room options.",
+        artifact: "Browse flow",
+        signal: "76%"
+      },
+      {
+        title: "Laravel CRUD",
+        description:
+          "Used Laravel patterns for creating, reading, updating, and organizing rental listings.",
+        artifact: "CRUD app",
+        signal: "76%"
+      }
+    ],
+    solution: [
+      {
+        title: "Kost Listing Platform",
+        description:
+          "A Laravel platform direction for browsing and managing rental room information.",
+        image: "/projects/github/ngekoss-app-laravel.webp",
+        alt: "Ngekoss App Laravel project card"
+      },
+      {
+        title: "Rental Management Base",
+        description:
+          "The system provides a foundation for structured housing listings and rental decision workflows.",
+        image: "/projects/github/ngekoss-app-laravel.webp",
+        alt: "Ngekoss rental platform workflow preview"
+      }
+    ],
+    impactMetrics: [
+      {
+        value: "Kost",
+        label: "Domain",
+        description:
+          "The project focuses on Indonesian room rental discovery."
+      },
+      {
+        value: "CRUD",
+        label: "Core Flow",
+        description:
+          "Listing management is the main application behavior."
+      },
+      {
+        value: "PHP",
+        label: "Stack",
+        description:
+          "The project is built with Laravel/PHP conventions."
+      }
+    ],
+    nextProjectSlug: "unitunes-music-management"
+  },
+  {
+    id: "project-21",
+    slug: "unitunes-music-management",
+    number: "21",
+    year: "2025",
+    title: "UNITUNES Music Management",
+    client: "UNITUNES / Music Library App",
+    category: "Desktop / Management",
+    discipline: "Java Application",
+    role: "Java Development / Information System",
+    duration: "Desktop app build",
+    techStack: ["Java", "Desktop App", "OOP"],
+    thumbnail: "/projects/github/unitunes-music-management.webp",
+    heroImage: "/projects/github/unitunes-music-management.webp",
+    repoUrl: "https://github.com/siberbot88/UNITUNES-Music-Management-Application",
+    summary:
+      "A Java music management application for practicing object-oriented structure, catalog management, and desktop information-system workflows.",
+    challenge:
+      "Music catalog management needs clear entities and actions so songs, artists, playlists, or library records can be maintained consistently.",
+    methodology: [
+      {
+        title: "Entity Design",
+        description:
+          "Modeled music library records around object-oriented concepts and management actions.",
+        artifact: "OOP model",
+        signal: "76%"
+      },
+      {
+        title: "Management Flow",
+        description:
+          "Organized the app around adding, viewing, updating, and maintaining catalog information.",
+        artifact: "Catalog CRUD",
+        signal: "76%"
+      },
+      {
+        title: "Desktop Practice",
+        description:
+          "Used Java as a practice ground for information-system behavior outside a web stack.",
+        artifact: "Java app",
+        signal: "74%"
+      }
+    ],
+    solution: [
+      {
+        title: "Music Management App",
+        description:
+          "A Java application direction for managing music library data and practicing desktop app structure.",
+        image: "/projects/github/unitunes-music-management.webp",
+        alt: "UNITUNES Music Management project card"
+      },
+      {
+        title: "OOP Catalog System",
+        description:
+          "The project uses catalog-management behavior as a practical object-oriented programming exercise.",
+        image: "/projects/github/unitunes-music-management.webp",
+        alt: "UNITUNES Java application workflow preview"
+      }
+    ],
+    impactMetrics: [
+      {
+        value: "Java",
+        label: "Language",
+        description:
+          "The repository is built as a Java application."
+      },
+      {
+        value: "OOP",
+        label: "Practice Focus",
+        description:
+          "The app emphasizes object-oriented information-system modeling."
+      },
+      {
+        value: "CRUD",
+        label: "Management Flow",
+        description:
+          "Catalog maintenance is the primary application behavior."
       }
     ],
     nextProjectSlug: "davis-presentation"
