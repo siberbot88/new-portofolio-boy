@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { projects } from "@/data/projects";
 
 function getWibTime() {
   return new Intl.DateTimeFormat("en-US", {
@@ -68,7 +69,9 @@ export function Header() {
               }`}
             />
             Selected{" "}
-            <sup className="text-[10px] text-[color:var(--muted)]">(07)</sup>
+            <sup className="text-[10px] text-[color:var(--muted)]">
+              ({projects.length.toString().padStart(2, "0")})
+            </sup>
           </Link>
           <Link
             href="/archive"
@@ -83,7 +86,10 @@ export function Header() {
                   : "border border-[color:var(--border)]"
               }`}
             />
-            Archive <sup className="text-[10px]">(07)</sup>
+            Archive{" "}
+            <sup className="text-[10px]">
+              ({projects.length.toString().padStart(2, "0")})
+            </sup>
           </Link>
           <Link href="mailto:mohammadbayurizkii@gmail.com" className="inline-flex items-baseline gap-1 text-[color:var(--muted)]">
             <span className="h-2.5 w-2.5 rounded-full border border-[color:var(--border)]" />

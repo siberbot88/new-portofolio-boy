@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { projects } from "@/data/projects";
 
 const email = "mohammadbayurizkii@gmail.com";
 
@@ -73,7 +74,10 @@ export function FloatingMenu() {
                         : "border border-[color:var(--border)]"
                     }`}
                   />
-                  Selected <sup className="text-[10px] text-[color:var(--muted)]">(07)</sup>
+                  Selected{" "}
+                  <sup className="text-[10px] text-[color:var(--muted)]">
+                    ({projects.length.toString().padStart(2, "0")})
+                  </sup>
                 </Link>
                 <Link
                   href="/archive"
@@ -91,7 +95,10 @@ export function FloatingMenu() {
                         : "border border-[color:var(--border)]"
                     }`}
                   />
-                  Archive <sup className="text-[10px]">(07)</sup>
+                  Archive{" "}
+                  <sup className="text-[10px]">
+                    ({projects.length.toString().padStart(2, "0")})
+                  </sup>
                 </Link>
                 <a
                   href={`mailto:${email}`}
