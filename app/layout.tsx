@@ -1,13 +1,30 @@
 /* eslint-disable @next/next/no-css-tags -- Explicit stylesheet fallback for the current Next/Webpack runtime. */
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
-import { FloatingMenu } from "@/components/FloatingMenu";
 import { Header } from "@/components/Header";
-import { MotionSystem } from "@/components/MotionSystem";
-import { PageTransitionSystem } from "@/components/PageTransitionSystem";
-import { SketchCursor } from "@/components/SketchCursor";
 import { SiteFooter } from "@/components/SiteFooter";
+import dynamic from "next/dynamic";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+
+const MotionSystem = dynamic(
+  () => import("@/components/MotionSystem").then((mod) => mod.MotionSystem),
+  { ssr: false }
+);
+
+const PageTransitionSystem = dynamic(
+  () => import("@/components/PageTransitionSystem").then((mod) => mod.PageTransitionSystem),
+  { ssr: false }
+);
+
+const SketchCursor = dynamic(
+  () => import("@/components/SketchCursor").then((mod) => mod.SketchCursor),
+  { ssr: false }
+);
+
+const FloatingMenu = dynamic(
+  () => import("@/components/FloatingMenu").then((mod) => mod.FloatingMenu),
+  { ssr: false }
+);
 import { SITE_URL, PERSON, profilePageJsonLd, webSiteJsonLd } from "@/lib/seo";
 
 const siteTitle = "Mohammad Bayu Rizki — Business Analyst & Digital Developer";

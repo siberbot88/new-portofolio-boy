@@ -218,8 +218,7 @@ export function DesignUiUxGallery() {
                       src={image.src}
                       alt={image.alt}
                       fill
-                      unoptimized
-                      loading={copyIndex === 1 && index < 3 ? "eager" : "lazy"}
+                      loading="lazy"
                       decoding="async"
                       sizes="(max-width: 768px) 82vw, 520px"
                       className="design-uiux-gallery__image"

@@ -1,7 +1,11 @@
 import { ProjectIndexTable } from "@/components/ProjectIndexTable";
-import { DesignUiUxGallery } from "@/components/DesignUiUxGallery";
+import dynamic from "next/dynamic";
 import { projects } from "@/data/projects";
 
+const DesignUiUxGallery = dynamic(
+  () => import("@/components/DesignUiUxGallery").then((mod) => mod.DesignUiUxGallery),
+  { ssr: true }
+);
 export default function Home() {
   return (
     <main>
