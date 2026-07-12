@@ -6,6 +6,12 @@ import { FooterNextProject } from "@/components/FooterNextProject";
 import { ProjectDesignSystem } from "@/components/ProjectDesignSystem";
 import { ProjectDetailMatrix } from "@/components/ProjectDetailMatrix";
 import { getProjectBySlug, projects } from "@/data/projects";
+import {
+  SITE_URL,
+  PERSON,
+  projectJsonLd,
+  projectBreadcrumbJsonLd
+} from "@/lib/seo";
 
 type ProjectPageProps = {
   params: Promise<{
@@ -30,8 +36,40 @@ export async function generateMetadata({ params }: ProjectPageProps) {
   }
 
   return {
-    title: `${project.title} - Mohammad Bayu Rizki`,
-    description: project.summary
+    title: project.title,
+    description: project.summary,
+    keywords: [
+      project.title,
+      project.category,
+      project.discipline,
+      PERSON.name,
+      ...project.techStack
+    ],
+    alternates: {
+      canonical: `${SITE_URL}/projects/${project.slug}`
+    },
+    openGraph: {
+      type: "article",
+      title: `${project.title} — ${PERSON.name}`,
+      description: project.summary,
+      url: `${SITE_URL}/projects/${project.slug}`,
+      siteName: `${PERSON.name} Portfolio`,
+      images: [
+        {
+          url: project.heroImage,
+          width: 1200,
+          height: 630,
+          alt: `${project.title} — case study preview`
+        }
+      ],
+      locale: "id_ID"
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} — ${PERSON.name}`,
+      description: project.summary,
+      images: [project.heroImage]
+    }
   };
 }
 
@@ -74,6 +112,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(projectJsonLd(project))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(projectBreadcrumbJsonLd(project))
+        }}
+      />
       <ProjectDetailMatrix project={project} />
       <ProjectDesignSystem project={project} />
 
