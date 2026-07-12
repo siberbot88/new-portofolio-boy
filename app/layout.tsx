@@ -7,6 +7,7 @@ import { MotionSystem } from "@/components/MotionSystem";
 import { PageTransitionSystem } from "@/components/PageTransitionSystem";
 import { SketchCursor } from "@/components/SketchCursor";
 import { SiteFooter } from "@/components/SiteFooter";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Mohammad Bayu Rizki - Portfolio",
@@ -37,6 +38,7 @@ export default function RootLayout({
         {children}
         <SiteFooter />
         <FloatingMenu />
+        <SpeedInsights />
       </body>
     </html>
   );

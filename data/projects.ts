@@ -1091,7 +1091,7 @@ export const projects: Project[] = [
           "The archive supports both table and visual browsing modes."
       },
       {
-        value: "21",
+        value: "22",
         label: "Projects Ready",
         description:
           "The archive now carries the selected polished GitHub projects alongside the original case studies."
@@ -1735,6 +1735,93 @@ export const projects: Project[] = [
         label: "Management Flow",
         description:
           "Catalog maintenance is the primary application behavior."
+      }
+    ],
+    nextProjectSlug: "palletgrid"
+  },
+  {
+    id: "project-22",
+    slug: "palletgrid",
+    number: "22",
+    year: "2026",
+    title: "PaletteGrid",
+    client: "Design Tooling / Starter System Generator",
+    category: "Utility / Tool",
+    discipline: "Design System Generator",
+    role: "Frontend Development / Design Engineering",
+    duration: "Tool build",
+    techStack: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
+    thumbnail: "/projects/github/palletgrid.png",
+    heroImage: "/projects/github/palletgrid.png",
+    repoUrl: "https://github.com/siberbot88/PalleteGrid",
+    summary:
+      "A design system generator that creates starter systems from color and type. Pick a mood, tune the palette, preview real UI components, then copy CSS, Tailwind, or JSON tokens.",
+    challenge:
+      "Starting a new project's visual identity from scratch is slow. Designers and developers need a quick way to generate cohesive color palettes, typography pairings, and preview them as real UI components before committing to a direction.",
+    methodology: [
+      {
+        title: "Mood-Based Generation",
+        description:
+          "Built a mood selector system with presets like Future Neon that drive palette generation, contrast rules, and typography direction automatically.",
+        artifact: "Mood engine",
+        signal: "88%"
+      },
+      {
+        title: "Semantic Color System",
+        description:
+          "Generated palettes produce semantic tokens — canvas, ink, primary, accent — ready for immediate UI use with accessible contrast.",
+        artifact: "Color tokens",
+        signal: "86%"
+      },
+      {
+        title: "Live Preview Canvas",
+        description:
+          "Designed a preview canvas that renders the generated palette as real design directions: homepage concepts, dashboards, business cards, and typography specimens.",
+        artifact: "Preview UI",
+        signal: "84%"
+      }
+    ],
+    solution: [
+      {
+        title: "Design System Landing",
+        description:
+          "A clean hero introducing PaletteGrid's purpose: generate a starter design system from color and type, with immediate generate and preview actions.",
+        image: "/projects/github/palletgrid.png",
+        alt: "PaletteGrid hero landing page with generate system call-to-action"
+      },
+      {
+        title: "Generator Controls Panel",
+        description:
+          "An interactive control panel for shaping the starter system: palette size, mood, contrast level, canvas color, font pairing, with generate, randomize, and reset actions.",
+        image: "/projects/github/palletgrid2.png",
+        alt: "PaletteGrid generator controls with mood selector and semantic color result cards"
+      },
+      {
+        title: "Preview Canvas Showcase",
+        description:
+          "A live preview canvas rendering the palette as real design directions — web concepts, abstract compositions, business cards, dashboards, and typography specimens.",
+        image: "/projects/github/palletgrid3.png",
+        alt: "PaletteGrid preview canvas showing homepage concept, dashboard, and typography specimen"
+      }
+    ],
+    impactMetrics: [
+      {
+        value: "06",
+        label: "Semantic Tokens",
+        description:
+          "Each generated palette produces canvas, ink, primary, accent, muted, and border semantic color roles."
+      },
+      {
+        value: "03",
+        label: "Export Formats",
+        description:
+          "The tool outputs design tokens in CSS custom properties, Tailwind config, and JSON formats."
+      },
+      {
+        value: "Live",
+        label: "Preview Canvas",
+        description:
+          "Generated palettes are immediately previewed as real UI components and layout directions."
       }
     ],
     nextProjectSlug: "davis-presentation"

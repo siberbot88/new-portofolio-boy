@@ -1,98 +1,289 @@
-[3m[1m[34m≈[39m[22m[23m tailwindcss [34mv4.3.0[39m
-
-Done in [33m304ms[39m
 ⚠ Attempted to load @next/swc-win32-x64-msvc, but an error occurred: \\?\P:\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node is not a valid Win32 application.
 \\?\P:\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node
-[browser] GSAP target [data-animate='hero-line'] not found. https://gsap.com (webpack-internal:///(app-pages-browser)
-[browser] Image with src "/projects/ets-storytelling.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[browser] GSAP target  not found. https://gsap.com (webpack-internal:///(app-pages-browser)
-[browser] GSAP target [data-animate='fade-up'] not found. https://gsap.com (webpack-internal:///(app-pages-browser)
-[browser] GSAP target  not found. https://gsap.com (webpack-internal:///(app-pages-browser)
-[browser] GSAP target [data-project-card] not found. https://gsap.com (webpack-internal:///(app-pages-browser)
-[browser] GSAP target  not found. https://gsap.com (webpack-internal:///(app-pages-browser)
-[browser] GSAP target  not found. https://gsap.com
-[browser] GSAP target  not found. https://gsap.com
-[browser] GSAP target  not found. https://gsap.com
-[browser] Image with src "/projects/dashboard-analitik-superstore.png" has "fill" and parent element with invalid "position". Provided "sticky" should be one of absolute,fixed,relative.
-[browser] Image with src "/projects/dashboard-analitik-superstore.png" has "fill" and parent element with invalid "position". Provided "sticky" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/davis-presentation.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/davis-presentation.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/early-warning-system.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/koperasi-sembako-platform.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/bullet-forge-commandos.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/dashboard-analitik-superstore.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/davis-presentation.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/ets-storytelling.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/website-sajak-kopi.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/davis-presentation.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/dashboard-analitik-superstore.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/bullet-forge-commandos.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/koperasi-sembako-platform.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/early-warning-system.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/ets-storytelling.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/website-sajak-kopi.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/dashboard-analitik-superstore.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
 [browser] Image with src "/projects/dashboard-analitik-superstore.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[browser] GSAP target [data-project-card] not found. https://gsap.com (webpack-internal:///(app-pages-browser)
-[browser] GSAP target  not found. https://gsap.com (webpack-internal:///(app-pages-browser)
-[browser] Image with src "/projects/davis-presentation.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[browser] Image with src "/projects/davis-presentation.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/dashboard-analitik-superstore.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/bullet-forge-commandos.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/koperasi-sembako-platform.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/early-warning-system.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/ets-storytelling.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/website-sajak-kopi.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/davis-presentation.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/dashboard-analitik-superstore.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/bullet-forge-commandos.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/koperasi-sembako-platform.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/early-warning-system.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/ets-storytelling.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/website-sajak-kopi.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/bullet-forge-commandos.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/koperasi-sembako-platform.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/early-warning-system.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/koperasi-sembako-platform.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/bullet-forge-commandos.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/dashboard-analitik-superstore.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/bullet-forge-commandos.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/dashboard-analitik-superstore.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/website-sajak-kopi.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/ets-storytelling.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/early-warning-system.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/bullet-forge-commandos.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/dashboard-analitik-superstore.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/bullet-forge-commandos.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/koperasi-sembako-platform.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/dashboard-analitik-superstore.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/koperasi-sembako-platform.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/bullet-forge-commandos.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/early-warning-system.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/ets-storytelling.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/website-sajak-kopi.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/bullet-forge-commandos.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[browser] GSAP target [data-project-card] not found. https://gsap.com (webpack-internal:///(app-pages-browser)
-[browser] GSAP target  not found. https://gsap.com (webpack-internal:///(app-pages-browser)
-[browser] GSAP target  not found. https://gsap.com
-[browser] GSAP target [data-project-card] not found. https://gsap.com (webpack-internal:///(app-pages-browser)
-[browser] GSAP target  not found. https://gsap.com (webpack-internal:///(app-pages-browser)
-[browser] Image with src "/projects/dashboard-analitik-superstore.png" has "fill" and parent element with invalid "position". Provided "sticky" should be one of absolute,fixed,relative.
-[browser] GSAP target  not found. https://gsap.com
-[browser] GSAP target [data-project-card] not found. https://gsap.com (webpack-internal:///(app-pages-browser)
-[browser] GSAP target  not found. https://gsap.com (webpack-internal:///(app-pages-browser)
-[browser] Image with src "/projects/dashboard-analitik-superstore.png" has "fill" and parent element with invalid "position". Provided "sticky" should be one of absolute,fixed,relative.
-[browser] GSAP target  not found. https://gsap.com
-⨯ ./components/FloatingMenu.tsx
-Error: ENOENT: no such file or directory, open 'P:\components\FloatingMenu.tsx'
-
-Import trace for requested module:
-./components/FloatingMenu.tsx
-./app/layout.tsx
-⨯ ./components/FloatingMenu.tsx
-Error: ENOENT: no such file or directory, open 'P:\components\FloatingMenu.tsx'
-
-Import trace for requested module:
-./components/FloatingMenu.tsx
-./app/layout.tsx
-[browser] Uncaught ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
-Error: ENOENT: no such file or directory, open 'P:\components\FloatingMenu.tsx'
-⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[browser] Image with src "/projects/davis-presentation.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
+[browser] Image with src "/projects/bullet-forge-commandos.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[browser] Image with src "/projects/bullet-forge-commandos.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[browser] Image with src "/projects/bullet-forge-commandos.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[browser] Image with src "/projects/koperasi-sembako-platform.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/dashboard-analitik-superstore.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
+[browser] Image with src "/projects/early-warning-system.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/bullet-forge-commandos.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
+[browser] Image with src "/projects/ets-storytelling.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/koperasi-sembako-platform.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
+[browser] Image with src "/projects/website-sajak-kopi.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/early-warning-system.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
+[browser] Image with src "/projects/bullet-forge-commandos.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/ets-storytelling.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
+[browser] Image with src "/projects/website-sajak-kopi.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/website-sajak-kopi.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
+[browser] Image with src "/projects/dashboard-analitik-superstore.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/davis-presentation.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
+[browser] Image with src "/projects/davis-presentation.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/dashboard-analitik-superstore.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
+[browser] Image with src "/projects/bullet-forge-commandos.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/bullet-forge-commandos.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
+[browser] Image with src "/projects/early-warning-system.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/koperasi-sembako-platform.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
+[browser] Image with src "/projects/koperasi-sembako-platform.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/early-warning-system.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
+[browser] Image with src "/projects/ets-storytelling.png" is using quality "76" which is not configured in images.qualities [75]. Please update your config to [75, 76].
 Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/ets-storytelling.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/website-sajak-kopi.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] GSAP target [data-project-card] not found. https://gsap.com (webpack-internal:///(app-pages-browser)
-[browser] GSAP target  not found. https://gsap.com (webpack-internal:///(app-pages-browser)
-[browser] GSAP target  not found. https://gsap.com
-[browser] GSAP target  not found. https://gsap.com
-[browser] Image with src "/projects/davis-presentation.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/dashboard-analitik-superstore.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/bullet-forge-commandos.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/koperasi-sembako-platform.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/early-warning-system.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/ets-storytelling.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
-[browser] Image with src "/projects/website-sajak-kopi.png" is using quality "76" which is not configured in images.qualities [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75]. Please update your config to [70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 75, 76].
-Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[browser] Image with src "/projects/design-ui-ux/Harversfarm APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/LIORA APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/BBIHUB.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/BBIHUB.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/Harversfarm APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/LIORA APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/Safetion APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/Trailo APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/WEB Pemda.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/BBIHUB.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/Harversfarm APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/LIORA APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/Safetion APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/Trailo APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/WEB Pemda.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/BBIHUB.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/Harversfarm APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/LIORA APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/Safetion APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/Trailo APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/WEB Pemda.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/BBIHUB.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/Harversfarm APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/LIORA APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/Safetion APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/Trailo APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/WEB Pemda.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/Safetion%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/Harversfarm%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/LIORA%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/Trailo%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/WEB%20Pemda.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/LIORA%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Safetion%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/BBIHUB.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Trailo%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Harversfarm%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/WEB%20Pemda.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/BBIHUB.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/BBIHUB.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Harversfarm%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/LIORA%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Safetion%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Trailo%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/WEB%20Pemda.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/BBIHUB.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Harversfarm%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/LIORA%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Safetion%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Trailo%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/WEB%20Pemda.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/BBIHUB.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/BBIHUB.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Harversfarm%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/LIORA%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Safetion%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Trailo%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/WEB%20Pemda.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/BBIHUB.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/BBIHUB.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Harversfarm%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/LIORA%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Safetion%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Trailo%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/WEB%20Pemda.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/BBIHUB.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Harversfarm%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/LIORA%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Safetion%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Trailo%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/WEB%20Pemda.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/BBIHUB.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Harversfarm%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/LIORA%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Safetion%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Trailo%20APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/WEB%20Pemda.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/BBIHUB.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/LIORA-APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Safetion-APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Harversfarm-APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Trailo-APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/WEB-Pemda.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "/projects/design-ui-ux/BBIHUB.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/BBIHUB.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Harversfarm-APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/LIORA-APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Safetion-APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/Trailo-APP.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+[browser] Image with src "http://localhost:3000/projects/design-ui-ux/WEB-Pemda.png" has "fill" and parent element with invalid "position". Provided "static" should be one of absolute,fixed,relative.
+⨯ Error: ENOENT: no such file or directory, open 'P:\.next\dev\server\app-paths-manifest.json'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'P:\\.next\\dev\\server\\app-paths-manifest.json',
+  page: '/'
+}
+⨯ Error: ENOENT: no such file or directory, open 'P:\.next\dev\routes-manifest.json'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'P:\\.next\\dev\\routes-manifest.json'
+}
+⨯ Error: ENOENT: no such file or directory, open 'P:\.next\dev\routes-manifest.json'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'P:\\.next\\dev\\routes-manifest.json',
+  page: '/'
+}
+⨯ Error: ENOENT: no such file or directory, open 'P:\.next\dev\routes-manifest.json'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'P:\\.next\\dev\\routes-manifest.json'
+}
+Error: ENOENT: no such file or directory, open 'P:\.next\dev\server\app-paths-manifest.json'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'P:\\.next\\dev\\server\\app-paths-manifest.json',
+  page: '/'
+}
+Error: ENOENT: no such file or directory, open 'P:\.next\dev\routes-manifest.json'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'P:\\.next\\dev\\routes-manifest.json',
+  page: '/'
+}
+⨯ Error: ENOENT: no such file or directory, open 'P:\.next\dev\routes-manifest.json'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'P:\\.next\\dev\\routes-manifest.json'
+}
+⨯ Error: ENOENT: no such file or directory, open 'P:\.next\dev\routes-manifest.json'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'P:\\.next\\dev\\routes-manifest.json'
+}
+Error: ENOENT: no such file or directory, open 'P:\.next\dev\routes-manifest.json'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'P:\\.next\\dev\\routes-manifest.json'
+}
+Error: ENOENT: no such file or directory, open 'P:\.next\dev\routes-manifest.json'
+    at ignore-listed frames {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'P:\\.next\\dev\\routes-manifest.json'
+}
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'P:\.next\dev\cache\webpack\client-development-fallback\0.pack.gz_' -> 'P:\.next\dev\cache\webpack\client-development-fallback\0.pack.gz'
