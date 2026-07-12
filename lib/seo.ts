@@ -1,6 +1,6 @@
 import type { Project } from "@/data/projects";
 
-export const SITE_URL = "https://new-portofolio-boy.vercel.app";
+export const SITE_URL = "https://mhdbayurizki.web.id";
 
 export const PERSON = {
   name: "Mohammad Bayu Rizki",
