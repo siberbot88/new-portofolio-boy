@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { projects } from "@/data/projects";
-
-const SITE_URL = "https://new-portofolio-boy.vercel.app";
+import { SITE_URL } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const projectPages: MetadataRoute.Sitemap = projects.map((project) => ({
