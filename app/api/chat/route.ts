@@ -278,7 +278,7 @@ export async function POST(request: Request) {
     // 4. Kirim ke Gemini dengan safety settings aktif
     const ai = getGenAI();
     const model = ai.getGenerativeModel({
-      model: "gemini-2.5-flash",
+      model: "gemini-3.5-flash",
       systemInstruction: SYSTEM_PROMPT,
       safetySettings: SAFETY_SETTINGS,
     });
