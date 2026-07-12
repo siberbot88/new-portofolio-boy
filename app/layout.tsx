@@ -4,34 +4,8 @@ import type { Metadata, Viewport } from "next";
 import { Header } from "@/components/Header";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import dynamic from "next/dynamic";
+import { ClientProviders } from "@/components/ClientProviders";
 import { SITE_URL, PERSON, profilePageJsonLd, webSiteJsonLd } from "@/lib/seo";
-
-const MotionSystem = dynamic(
-  () => import("@/components/MotionSystem").then((mod) => mod.MotionSystem),
-  { ssr: false }
-);
-
-const PageTransitionSystem = dynamic(
-  () => import("@/components/PageTransitionSystem").then((mod) => mod.PageTransitionSystem),
-  { ssr: false }
-);
-
-const SketchCursor = dynamic(
-  () => import("@/components/SketchCursor").then((mod) => mod.SketchCursor),
-  { ssr: false }
-);
-
-const FloatingMenu = dynamic(
-  () => import("@/components/FloatingMenu").then((mod) => mod.FloatingMenu),
-  { ssr: false }
-);
-
-const AiChatbot = dynamic(
-  () => import("@/components/AiChatbot").then((mod) => mod.AiChatbot),
-  { ssr: false }
-);
-
 
 const siteTitle = "Mohammad Bayu Rizki — Business Analyst & Digital Developer";
 const siteDescription =
@@ -147,16 +121,11 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
-        <PageTransitionSystem />
-        <MotionSystem />
-        <SketchCursor />
         {children}
         <SiteFooter />
-        <FloatingMenu />
-        <AiChatbot />
+        <ClientProviders />
         <SpeedInsights />
       </body>
     </html>
   );
 }
-
