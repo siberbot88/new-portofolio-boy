@@ -180,17 +180,21 @@
 }
 
 .chatbot-message__bubble {
-  max-width: 75%;
+  max-width: 90%;
   padding: 0.6rem 0.875rem;
   border-radius: 12px;
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 1.6;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .chatbot-message--assistant .chatbot-message__bubble {
   background: rgba(248, 248, 248, 0.07);
   color: var(--foreground);
   border-radius: 4px 12px 12px 12px;
+  max-width: 92%;
 }
 
 .chatbot-message--user .chatbot-message__bubble {
@@ -198,6 +202,7 @@
   color: var(--background);
   font-weight: 500;
   border-radius: 12px 4px 12px 12px;
+  max-width: 82%;
 }
 
 .chatbot-typing {

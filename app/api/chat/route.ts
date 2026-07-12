@@ -258,7 +258,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           answer:
-            "Maaf, saya hanya bisa menjawab pertanyaan yang tersedia di panel chat ini. Silakan pilih salah satu pertanyaan yang sudah disediakan 😊",
+            "Maaf, saya hanya dapat menjawab pertanyaan yang tersedia di panel chat ini. Silakan pilih salah satu pertanyaan yang sudah disediakan.",
         },
         { status: 200 }
       );
@@ -269,7 +269,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           answer:
-            "Maaf, saya hanya bisa menjawab pertanyaan seputar Mohammad Bayu Rizki dan portofolionya. Ada yang ingin kamu ketahui tentang Bayu? 😊",
+            "Maaf, saya hanya dapat menjawab pertanyaan seputar Mohammad Bayu Rizki dan portofolionya. Silakan pilih salah satu pertanyaan yang telah tersedia.",
         },
         { status: 200 }
       );
@@ -278,7 +278,7 @@ export async function POST(request: Request) {
     // 4. Kirim ke Gemini dengan safety settings aktif
     const ai = getGenAI();
     const model = ai.getGenerativeModel({
-      model: "gemini-3.1-flash-lite",
+      model: "gemini-2.5-flash",
       systemInstruction: SYSTEM_PROMPT,
       safetySettings: SAFETY_SETTINGS,
     });
