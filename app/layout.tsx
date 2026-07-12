@@ -25,6 +25,11 @@ const FloatingMenu = dynamic(
   () => import("@/components/FloatingMenu").then((mod) => mod.FloatingMenu),
   { ssr: false }
 );
+
+const AiChatbot = dynamic(
+  () => import("@/components/AiChatbot").then((mod) => mod.AiChatbot),
+  { ssr: false }
+);
 import { SITE_URL, PERSON, profilePageJsonLd, webSiteJsonLd } from "@/lib/seo";
 
 const siteTitle = "Mohammad Bayu Rizki — Business Analyst & Digital Developer";
@@ -147,6 +152,7 @@ export default function RootLayout({
         {children}
         <SiteFooter />
         <FloatingMenu />
+        <AiChatbot />
         <SpeedInsights />
       </body>
     </html>
