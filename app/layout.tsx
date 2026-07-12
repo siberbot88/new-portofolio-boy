@@ -3,8 +3,9 @@ import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { Header } from "@/components/Header";
 import { SiteFooter } from "@/components/SiteFooter";
-import dynamic from "next/dynamic";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import dynamic from "next/dynamic";
+import { SITE_URL, PERSON, profilePageJsonLd, webSiteJsonLd } from "@/lib/seo";
 
 const MotionSystem = dynamic(
   () => import("@/components/MotionSystem").then((mod) => mod.MotionSystem),
@@ -30,7 +31,7 @@ const AiChatbot = dynamic(
   () => import("@/components/AiChatbot").then((mod) => mod.AiChatbot),
   { ssr: false }
 );
-import { SITE_URL, PERSON, profilePageJsonLd, webSiteJsonLd } from "@/lib/seo";
+
 
 const siteTitle = "Mohammad Bayu Rizki — Business Analyst & Digital Developer";
 const siteDescription =
