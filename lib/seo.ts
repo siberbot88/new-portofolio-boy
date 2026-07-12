@@ -7,6 +7,8 @@ export const PERSON = {
   jobTitle: "Business Analyst & Digital Developer",
   email: "mohammadbayurizkii@gmail.com",
   github: "https://github.com/siberbot88",
+  linkedin: "https://id.linkedin.com/in/mohammadbayurizki",
+  scholar: "https://scholar.google.co.id/citations?user=_x5e--kAAAAJ",
   image: `${SITE_URL}/projects/logo.png`
 };
 
@@ -23,7 +25,11 @@ export function personJsonLd() {
     url: SITE_URL,
     image: PERSON.image,
     email: `mailto:${PERSON.email}`,
-    sameAs: [PERSON.github],
+    sameAs: [
+      PERSON.github,
+      PERSON.linkedin,
+      PERSON.scholar
+    ],
     knowsAbout: [
       "Business Analysis",
       "Data Visualization",
@@ -33,6 +39,8 @@ export function personJsonLd() {
       "Dashboard Design",
       "Data Storytelling",
       "Full-Stack Development",
+      "Teknologi Informasi",
+      "Sistem Informasi",
       "Next.js",
       "React",
       "Laravel",
@@ -41,8 +49,25 @@ export function personJsonLd() {
     ],
     alumniOf: {
       "@type": "EducationalOrganization",
-      name: "Universitas Terbuka"
-    }
+      name: "Universitas Pembangunan Nasional Veteran Jawa Timur"
+    },
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Pengaruh Penggunaan AI terhadap Kompetensi dan Motivasi Belajar Mahasiswa",
+        credentialCategory: "Scholarly Article"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Perancangan Sistem Informasi Geografis Wilayah Rawan Pembegalan Menggunakan Metode AAOD",
+        credentialCategory: "Scholarly Article"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Model Adopsi DeepSeek AI pada Mahasiswa di Surabaya Menggunakan TAM",
+        credentialCategory: "Scholarly Article"
+      }
+    ]
   };
 }
 

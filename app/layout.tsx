@@ -40,7 +40,12 @@ export const metadata: Metadata = {
     "Python",
     "D3.js",
     "digital development",
-    "Indonesia"
+    "Indonesia",
+    "UPN Veteran Jawa Timur",
+    "teknologi informasi",
+    "sistem informasi",
+    "Google Scholar",
+    "researcher"
   ],
   authors: [{ name: PERSON.name, url: SITE_URL }],
   creator: PERSON.name,
