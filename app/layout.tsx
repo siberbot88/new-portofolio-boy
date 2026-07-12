@@ -88,7 +88,10 @@ export const metadata: Metadata = {
     creator: "@siberbot88"
   },
   category: "portfolio",
-  classification: "Business Analysis, UX Research, Digital Development"
+  classification: "Business Analysis, UX Research, Digital Development",
+  verification: {
+    google: "a7yoErHxKDctr8PnhmYt3mijl-kYNLULEKg_K-vAXMg"
+  }
 };
 
 export const viewport: Viewport = {
