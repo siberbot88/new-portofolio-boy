@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from "@google/generative-ai";
 
 /* ============================================================
    ANTI-JAILBREAK SYSTEM PROMPT
@@ -173,20 +173,20 @@ function getGenAI() {
    ============================================================ */
 const SAFETY_SETTINGS = [
   {
-    category: "HARM_CATEGORY_HARASSMENT" as const,
-    threshold: "BLOCK_MEDIUM_AND_ABOVE" as const,
+    category: HarmCategory.HARM_CATEGORY_HARASSMENT,
+    threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
   },
   {
-    category: "HARM_CATEGORY_HATE_SPEECH" as const,
-    threshold: "BLOCK_MEDIUM_AND_ABOVE" as const,
+    category: HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+    threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
   },
   {
-    category: "HARM_CATEGORY_SEXUALLY_EXPLICIT" as const,
-    threshold: "BLOCK_MEDIUM_AND_ABOVE" as const,
+    category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
+    threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
   },
   {
-    category: "HARM_CATEGORY_DANGEROUS_CONTENT" as const,
-    threshold: "BLOCK_MEDIUM_AND_ABOVE" as const,
+    category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+    threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
   },
 ];
 
@@ -235,7 +235,7 @@ export async function POST(request: Request) {
     // 4. Kirim ke Gemini dengan safety settings aktif
     const ai = getGenAI();
     const model = ai.getGenerativeModel({
-      model: "gemini-2.5-flash",
+      model: "gemini-3.1-flash-lite",
       systemInstruction: SYSTEM_PROMPT,
       safetySettings: SAFETY_SETTINGS,
     });
