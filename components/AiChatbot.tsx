@@ -1,5 +1,6 @@
 "use client";
 
+import "./AiChatbot.css";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 type Message = {
